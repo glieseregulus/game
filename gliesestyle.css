@@ -16,3 +16,9 @@ iframe {
     height:100%;
     display:flex;
 }
+
+body {
+    background-image:url("starmap_bg.png");
+    background-repeat: no-repeat;
+    background-size:cover;
+}

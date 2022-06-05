@@ -45,7 +45,7 @@ html, body, .container {
     height: 480px; /* initial height, will be dynamically adjusted at runtime */
     display: block;
     align-items: center;
-    position: relative;
+    position: fixed;
     text-align: center;
     justify-content: center;
 }
