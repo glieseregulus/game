@@ -1,5 +1,4 @@
-@charset "utf-8";
-/* CSS style sheet used with Epic Games HTML5 projects
+﻿/* CSS style sheet used with Epic Games HTML5 projects
  *
  * much of this is for UE4 development purposes.
  *
@@ -7,12 +6,16 @@
  * - make a copy of this file - or make one from scratch
  * - and put it in: "your project folder"/Build/HTML/GameX.css.template
  */
+
 html, body, .container {
 	height: 100%;
 	font-family: "Helvetica Neue", "HelveticaNeue", Helvetica, Arial, sans-serif;
-    margin: 0;
-    background:#000;
-    color:#fee;
+}
+
+.h4, h4 {
+	margin-top: 1pt;
+	margin-bottom: 1pt;
+	font-size: 10pt;
 }
 
 .container {
@@ -46,10 +49,12 @@ html, body, .container {
 
 .wrapper {
 	position: relative;
+	margin: 1em auto 10px auto;
 	text-align: center;
 	min-width: 640px;
 	width: 100%;
 	height: 480px; /* initial height, will be dynamically adjusted at runtime */
+	max-width: 95%;
 	display: block;
 	align-items: center;
 	position: relative;
@@ -91,10 +96,13 @@ html, body, .container {
 }
 
 .buttonarea {
-	min-height: 0px;
-	border: 0;
-	padding: 0;
-	margin: 0;
+	min-height: 3%;
+	border-top: 0px;
+	border-bottom: 0px;
+	padding: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
  }
 
 .btn { padding: 0px; text-align: center; min-width: 150px }
@@ -107,8 +115,3 @@ html, body, .container {
 	transform: translate(-50%,-50%);
 }
 
-#buttonrow {
-    visibility: hidden;
-    height: 0;
-    width: 0;
-}
