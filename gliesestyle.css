@@ -235,6 +235,12 @@ footer {
     text-shadow: 1px 1px 7px #fff;
 }
 
+button{
+    width:36px;
+    height:36px;
+    border-radius:36px;
+}
+
 @media only screen and (min-width: 640px) {
     .subarea {
     flex-flow: row;
