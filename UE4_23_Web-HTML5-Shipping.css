@@ -6,6 +6,7 @@ html, body, .container {
     margin: 0;
     background-color: transparent;
     color:#fee;
+    overflow:hidden;
 }
 
 .container {
@@ -45,7 +46,7 @@ html, body, .container {
     height: 480px; /* initial height, will be dynamically adjusted at runtime */
     display: block;
     align-items: center;
-    position: fixed;
+/*    position: fixed; */
     text-align: center;
     justify-content: center;
 }
