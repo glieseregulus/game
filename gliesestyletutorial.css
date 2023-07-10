@@ -255,12 +255,8 @@ button{
         background-size: 894px 488px;
         }
 }
-
-@media screen and (max-width: 447px) {
-    .Feature{
-        box-sizing: content-box;
-        border: solid #red 10px;
-        background:#000 center url("T_Feature.png") no-repeat;
-        background-size: 100px 100px;
+@media only screen and (max-width: 639px) {
+    section {
+    height:512px;
     }
 }
