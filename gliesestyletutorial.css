@@ -11,8 +11,15 @@
 }
 
 h1 {
-    background: #777;
+    background: transparent;
+    color:#ccc;
     text-align: center;
+    font-size:24px;
+    padding-bottom:5px;
+}
+
+p {
+    color:#ccc;
 }
 
 iframe {
@@ -168,10 +175,7 @@ a.button:hover {
     min-width:320px;
     height:560px;
 }
-h1{
-    font-size:24px;
-    padding-bottom:5px;
-}
+
 .background01 {
     background-image:url("Laika00.png");
     background-repeat: no-repeat;
@@ -213,20 +217,10 @@ h1{
    display: block;
    clear: both;
 }
-.linkbox {
-    line-height:1;
-    text-decoration: none;
-}
-.streaming {
-    background-color:#e9f9fc;
-    color:#008ea2;
-    border:solid #e9f9fc;
-    position: absolute;
-    left: 220px;
-}
 section{
     width:auto;
-    height:488px;
+    height:auto;
+    box-sizing:content-box;
 }
 footer {
     width:100%;
@@ -246,21 +240,51 @@ button{
     border-radius:36px;
 }
 
+.text01{
+    padding:10px 0 15px 15px;
+}
+
+.text02{
+    padding:10px 0 0 15px;
+}
+
+h2{
+    background: transparent;
+    color:#ccc;
+    text-align: left;
+    font-size:24px;
+    padding:10px 0 0 15px;
+}
+
+.image{
+    text-align:center;
+    width:100%;
+}
 
 @media only screen and (min-width: 640px) {
-    .Feature{
+    .BGimage{
+        height:488px;
         box-sizing: content-box;
         border: solid #5B6DCD 10px;
-        background:#000 center url("T_Feature.png") no-repeat;
+        background:transparent center url("T_Feature.png") no-repeat;
         background-size: 894px 488px;
         }
+    .Explanation{
+        width:100%;
+        max-width:894px;
+    }
 }
 
 @media screen and (max-width: 639px) {
-    .Feature{
+    .BGimage{
+        height:488px;
         box-sizing: content-box;
         border: solid #red 10px;
-        background:#000 center url("T_Feature.png") no-repeat;
-        background-size: 100px 100px;
+        background:transparent center url("Thumb.png") no-repeat;
+        background-size: 100%;
+    }
+    .Explanation{
+        width:100%;
+        max-width:894px;
     }
 }
