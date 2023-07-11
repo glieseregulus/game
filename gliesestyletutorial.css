@@ -221,6 +221,7 @@ section{
     width:auto;
     height:auto;
     box-sizing:content-box;
+    margin-top:20px;
 }
 footer {
     width:100%;
@@ -229,6 +230,7 @@ footer {
     background-color:#222;
     color:#ccc;
     text-align:center;
+    margin-top:40px;
 }
 .shadow{
     text-shadow: 1px 1px 7px #fff;
@@ -241,11 +243,11 @@ button{
 }
 
 .text01{
-    padding:10px 0 15px 15px;
+    padding:5px 0 30px 15px;
 }
 
 .text02{
-    padding:10px 0 0 15px;
+    padding:5px 0 0 15px;
 }
 
 h2{
@@ -253,19 +255,33 @@ h2{
     color:#ccc;
     text-align: left;
     font-size:24px;
-    padding:10px 0 0 15px;
+    padding:5px 0 0 15px;
 }
 
 .image{
     text-align:center;
-    width:100%;
+}
+
+.content-box{
+    max-width:894px;
+    display:block;
+    margin:0 auto;
+}
+
+ol{
+    padding-left:60px;
+    padding-right:20px;
+}
+
+li{
+    color:#ccc;
+    list-style:decimal;
 }
 
 @media only screen and (min-width: 640px) {
     .BGimage{
         height:488px;
         box-sizing: content-box;
-        border: solid #5B6DCD 10px;
         background:transparent center url("T_Feature.png") no-repeat;
         background-size: 894px 488px;
         }
@@ -279,7 +295,6 @@ h2{
     .BGimage{
         height:488px;
         box-sizing: content-box;
-        border: solid #red 10px;
         background:transparent center url("Thumb.png") no-repeat;
         background-size: 100%;
     }
