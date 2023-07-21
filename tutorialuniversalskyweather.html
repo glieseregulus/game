@@ -12,15 +12,34 @@
 <body>
     <h1>Unreal Engine Asset Tutorial</h1>
     <section class="BGimage"></section>
-    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br>If you are using<br>MobilePreview,<br>please select 'BP_SkyColoud' in the Outliner<br>and enable the Mobile checkbox in the detail panel.</p>
-        <p class="image"><a href="T_Explanation.png"><image src="T_Explanation.png" class="Explanation" alt="Explanation"></a></p></div>
+    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br></p></div>
     </section>
  
-    <section><div class="content-box"><h2>Use PC</h2></div><p class="text02 image"><image src="T_ArrowKey.png" class="Explanation" alt="Explanation"></p>
+    <section>
+        <div class="content-box">
+            <h2 class="QuickStart">Quick Start Guide</h2>
+            <ol>
+                <li><p class="text02">This page will provide a brief explanation of how to use this asset here.<br><br>If you are using<br>MobilePreview,<br>please select 'BP_SkyColoud' in the Outliner<br>and enable the Mobile checkbox in the detail panel.</p>
+                </li>
+                <p class="image"><a href="T_Explanation.png"><image src="T_Explanation.png" class="Explanation" alt="Explanation"></a></p>
+                <p class="text02">With the operations up to this point,<br>you should be able to render on MobilePreview, at least for now.</p>
+                <p class="text02">If you haven't performed this operation in the mobile development environment, the clouds won't be visible.<br><br>This will be confirmed when you package the project correctly.<br><br>Therefore, it is recommended to package the project or perform on-device debugging in your desired environment once at the startup phase.</p>
+                <li><p class="text02">Please refer to <a href="#UsePC">Use PC</a> and <a href="#UseAndroid">Use Android</a> for instructions on how to perform the operation.</p>
+                    <p class="text02">And here, we will explain some of the custom features.<br>In this asset, you will primarily use a blueprint named 'BP_SkyCloud'.<br>First, let me explain the manipulable variables from the World Outliner's Details panel.</p>
+                    <p class="text02"><h3 class="">Date</h3></p>
+                    <p class="text02">User
+                    At the start of the game, it sets the in-game Year/Month/Day.<br><br>It automatically increments as days pass from the starting date.<br>This is configured in the 'BP_SkyCloud' Blueprint's TickGraph.<br><br>For instance, if you want to have a uniform 30 days in each month or adjust the number of days in each month, modify the 'int' value in the SelectNode inside the comment 'A system that sets and increments the end of a day, the end of a month, and the end of time.<br><br>For clarity, Option0 is not used. Option1 represents January, Option2 represents February..., and so on.</p>
+                    <p class="text02"><h3 class="">Date</h3></p>
+                </li>
+        </div>
+        </ol>
+    </section>
+ 
+    <section><div class="content-box"><h2 ID="UsePC">Use PC</h2></div><p class="text02 image"><image src="T_ArrowKey.png" class="Explanation" alt="Explanation"></p>
     </section>
     
     <section>
-        <div class="content-box"><h2>Use Android</h2><p><image src="T_AndroidUI.png" class="Explanation" alt="Explanation"></p><p class="text01">
+        <div class="content-box"><h2 ID="UseAndroid">Use Android</h2><p><image src="T_AndroidUI.png" class="Explanation" alt="Explanation"></p><p class="text01">
             <ol>
                 <li>Year / Month / Day (in game)</li>
                 <li>Time</li>
