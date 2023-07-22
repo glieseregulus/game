@@ -258,6 +258,11 @@ button{
     padding:30px 0 30px 15px;
 }
 
+.text03{
+    color:#FF0000 !important;
+    padding:30px 0 30px 15px;
+}
+
 h2{
     background: transparent;
     color:#ccc;
@@ -297,10 +302,14 @@ li{
 .QuickStart{
     color:#555;
     text-shadow: 1px 2px #558ABB;
-    width:100%;
+    width:96%;
     height:100px;
     background:center url("T_QuickStart.png") no-repeat;
     opacity:0.9;
+}
+
+.dot{
+    list-style:disc;
 }
 
 @media only screen and (min-width: 640px) {
