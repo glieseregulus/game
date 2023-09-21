@@ -38,7 +38,7 @@ iframe {
 }
 
 body {
-    background-image:url("starmap_bg.png");
+    background-image:url("../starmap_bg.png");
     background-repeat: repeat-y;
     background-size:cover;
 }
@@ -316,7 +316,7 @@ li{
     .BGimage{
         height:488px;
         box-sizing: content-box;
-        background:transparent center url("T_Feature.png") no-repeat;
+        background:transparent center url("./images/T_Feature.png") no-repeat;
         background-size: 894px 488px;
         }
     .Explanation{
