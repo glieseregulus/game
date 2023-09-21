@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    
+<head>
+    <title>SpinBox Settings</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="gliesestyletutorial.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Unreal Engine Asset Tutorial</h1>
+    <section class="BGimage"></section>
+    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br></p></div>
+    </section>
+ 
+    <section>
+        <div class="content-box">
+            <h2 class="QuickStart">Quick Start Guide</h2>
+            <ol>
+                <li>
+                    <p id="Mobile" class="text02">This page will provide a brief explanation of how to use this asset here.<br><br>If you are using<br>MobilePreview,<br>please select 'BP_SkyColoud' in the Outliner<br>and enable the Mobile checkbox in the detail panel.
+                    </p>
+                </li>
+                
+                <p class="image"><a href="T_Explanation.png"><image src="T_Explanation.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                
+                <p class="text02">With the operations up to this point,<br>you should be able to render on MobilePreview, at least for now.
+                </p>
+                
+                <p class="text02">If you haven't performed this operation in the mobile development environment, the clouds won't be visible.<br><br>This will be confirmed when you package the project correctly.<br><br>Therefore, it is recommended to package the project or perform on-device debugging in your desired environment once at the startup phase.
+                </p>
+                
+                <li>
+                    <p class="text02">Please refer to <a href="#UsePC">Use PC</a> and <a href="#UseAndroid">Use Android</a> for instructions on how to perform the operation.
+                    </p>
+                    <p class="text02">And here, we will explain some of the custom features.<br>In this asset, you will primarily use a blueprint named 'BP_SkyCloud'.<br>First, let me explain the manipulable variables from the World Outliner's Details panel.
+                    </p>
+                </li>
+                
+                <p class="text02"><h3>Date</h3>
+                </p>
+                
+                <p class="text02">User
+                At the start of the game, it sets the in-game Year/Month/Day.<br><br>It automatically increments as days pass from the starting date.<br>This is configured in the 'BP_SkyCloud' Blueprint's TickGraph.<br><br>For instance, if you want to have a uniform 30 days in each month or adjust the number of days in each month, modify the 'int' value in the SelectNode inside the comment 'A system that sets and increments the end of a day, the end of a month, and the end of time.<br><br>For clarity, Option0 is not used. Option1 represents January, Option2 represents February..., and so on.
+                </p>
+                
+                <p class="text02"><h3>Time</h3>
+                </p>
+                
+                <p class="text02">
+                <ul>
+                    <li class="dot">Solar Time
+                        <p class="text02">This variable represents the starting time at the beginning of the game.<br>It is connected to the Construction Script,<br> so you can smoothly proceed with your work by setting the appropriate state of the sun when creating content only for the night or only for the morning.
+                        </p>
+                    </li>
+                    
+                    <li class="dot">Time Scale
+                        <p class="text02">This variable represents the speed at which the in-game time progresses.<br>The smaller the value (can include decimals), the faster the progression, while a larger value will slow down the progression.<br>Setting it to 0 will completely stop the passage of time.
+                        </p>
+                    </li>
+                </ul>
+                </p>
+                
+                <p class="text02"><h3>Settings</h3>
+                </p>
+                
+                <p class="text02">
+                <ul>
+                    <li class="dot">Mobile
+                        <p class="text02">Please refer back to what was explained <a href="#Mobile">here</a> initially.
+                        </p>
+                    </li>
+                    <li class="dot">Random Weather
+                        <p class="text02">If this checkbox is set to True, the weather will be randomly selected every other day from the game's start.<br>Please note that this won't be reflected in the Editor's viewport.<br>If set to False, the weather will be fixed to the selections specified in the Editor Weather Selection below.
+                        </p>
+                    </li>
+                    <li class="dot">Auto Weather Update
+                        <p class="text02">You can set whether to perform weather updates once a day at 0:00.<br>Basically, this is used when the above 'Random Weather' is set to True to select a different weather randomly.<br>(There may be instances where the same weather is selected.)<br>If you want to use fixed weather, you can set it to False.</p>
+                    </li>
+                    <li class="dot">Editor Weather Selection
+                        <p class="text02">You can select several weather options from which you want to set the default weather in the viewport and the weather to be used in fixed scenarios.<br>Unlike in PIE (Play In Editor) mode, particles won't be generated.<br><br>Also, when 'Clear Sky' is selected, it represents a clear blue sky state without clouds at the initial setup.<br>Therefore, clouds won't appear during 'Clear Sky'.<br>Additionally, depending on the settings of the Preview Rendering Level, visibility of fog, rain, and other effects may vary or become less visible.<br><br>Please adjust these settings based on the device and specifications you intend to use.</p>
+                        <p class="text02"><h3 class="text03">Attention</h3></p>
+                        <p class="text02">If you want to change the contents of 'Editor Weather Selection,' such as cloud density or texture, you can access the 'Set Cloud System' function node in 'BP_SkyCloud' and manipulate the variables corresponding to each weather.</p>
+                    </li>
+                </ul>
+                </p>
+            </ol>
+        </div>
+    </section>
+ 
+    <section><div class="content-box"><h2 ID="UsePC">Use PC</h2></div><p class="text02 image"><image src="T_ArrowKey.png" class="Explanation" alt="Explanation"></p>
+    </section>
+    
+    <section>
+        <div class="content-box"><h2 ID="UseAndroid">Use Android</h2><p><image src="T_AndroidUI.png" class="Explanation" alt="Explanation"></p><p class="text01">
+            <ol>
+                <li>Year / Month / Day (in game)</li>
+                <li>Time</li>
+                <li>Weather Icon (Auto)</li>
+                <li>You can switch by clicking. Feet or Km</li>
+                <li>When Weather update is True, update the weather.</li>
+                <li>When this is clicked, it rises and exits the atmosphere. (This is primarily for debugging purposes.)</li>
+                <li>The more this bar is brought to the right, the slower the game speed. (However, time stops at the leftmost position.)</li>
+                <li>Press Shift + F1 to release the mouse.<br>
+                    Then catch the mouse again by clicking here again.<br>
+                    (The display changes while the mouse is caught and while it is open.)</li>
+                <li>If you want to go far away, mainly for debugging purposes,<br> click to speed pawns, and the pawns will move very fast.</li>
+                <li>It can be raised or lowered by manual operation.</li>
+                <li>Finish the game and close the window.</li>
+            </ol>
+        </p></div>
+    </section>
+
+    <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
+
+</body>
+</html>
