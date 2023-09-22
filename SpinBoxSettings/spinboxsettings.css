@@ -304,7 +304,7 @@ li{
     text-shadow: 1px 2px #558ABB;
     width:96%;
     height:100px;
-    background:center url("T_QuickStart.png") no-repeat;
+    background:center url("./images/T_QuickStart.png") no-repeat;
     opacity:0.9;
 }
 
