@@ -312,6 +312,10 @@ li{
     list-style:disc;
 }
 
+span.inline01{
+    padding-left:32px;
+}
+
 @media only screen and (min-width: 640px) {
     .BGimage{
         height:488px;
