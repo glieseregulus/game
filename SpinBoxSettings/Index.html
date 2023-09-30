@@ -44,44 +44,23 @@
                 <p class="text02">Contents - SpinBoxSettings -　Blueprints - Please open the GM_SpinboxSettings.<br>If you set the default value of Debug in Variable - Settings - Debug to True,<br> you can check the current user settings with debug messages in the top left corner.<br>You may find it useful if needed.<br><br>
                 <a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a>
                 </p>
-                
-                <p class="text02"><h3>Time</h3>
+                              
+                <p class="text02"><h3>About the Items Added to the Third-Person Template</h3>
                 </p>
                 
                 <p class="text02">
                 <ul>
-                    <li class="dot">Solar Time
-                        <p class="text02">This variable represents the starting time at the beginning of the game.<br>It is connected to the Construction Script,<br> so you can smoothly proceed with your work by setting the appropriate state of the sun when creating content only for the night or only for the morning.
+                    <li class="dot">Function
+                        <p class="text02">We have added 'SetCameraMode'.<br>This adjusts the camera to focus on the player when Previewer becomes True. It returns to its original state when you set Previewer to False.<br>It is primarily set to False in the Construction Script.
                         </p>
                     </li>
-                    
-                    <li class="dot">Time Scale
-                        <p class="text02">This variable represents the speed at which the in-game time progresses.<br>The smaller the value (can include decimals), the faster the progression, while a larger value will slow down the progression.<br>Setting it to 0 will completely stop the passage of time.
+                    <li class="dot">Macro
+                        <p class="text02">We have added 'Macro_UIMouseSensitivity'.<br>This is connected to the addControllerInput function in EnhancedActionEvent for adjusting Mouse Sensitivity.
                         </p>
                     </li>
-                </ul>
-                </p>
-                
-                <p class="text02"><h3>Settings</h3>
-                </p>
-                
-                <p class="text02">
-                <ul>
-                    <li class="dot">Mobile
-                        <p class="text02">Please refer back to what was explained <a href="#Mobile">here</a> initially.
+                    <li class="dot">Variables
+                        <p class="text02">We have added 'PointLight'.<br>This is spawned to prevent the character from getting dark when Camera Previewer becomes True. <br>It gets destroyed when it becomes False.<br>
                         </p>
-                    </li>
-                    <li class="dot">Random Weather
-                        <p class="text02">If this checkbox is set to True, the weather will be randomly selected every other day from the game's start.<br>Please note that this won't be reflected in the Editor's viewport.<br>If set to False, the weather will be fixed to the selections specified in the Editor Weather Selection below.
-                        </p>
-                    </li>
-                    <li class="dot">Auto Weather Update
-                        <p class="text02">You can set whether to perform weather updates once a day at 0:00.<br>Basically, this is used when the above 'Random Weather' is set to True to select a different weather randomly.<br>(There may be instances where the same weather is selected.)<br>If you want to use fixed weather, you can set it to False.</p>
-                    </li>
-                    <li class="dot">Editor Weather Selection
-                        <p class="text02">You can select several weather options from which you want to set the default weather in the viewport and the weather to be used in fixed scenarios.<br>Unlike in PIE (Play In Editor) mode, particles won't be generated.<br><br>Also, when 'Clear Sky' is selected, it represents a clear blue sky state without clouds at the initial setup.<br>Therefore, clouds won't appear during 'Clear Sky'.<br>Additionally, depending on the settings of the Preview Rendering Level, visibility of fog, rain, and other effects may vary or become less visible.<br><br>Please adjust these settings based on the device and specifications you intend to use.</p>
-                        <p class="text02"><h3 class="text03">Attention</h3></p>
-                        <p class="text02">If you want to change the contents of 'Editor Weather Selection,' such as cloud density or texture, you can access the 'Set Cloud System' function node in 'BP_SkyCloud' and manipulate the variables corresponding to each weather.</p>
                     </li>
                 </ul>
                 </p>
