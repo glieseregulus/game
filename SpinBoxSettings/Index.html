@@ -79,6 +79,25 @@
                 This operation can be performed by long-pressing and dragging the left mouse button. It automatically returns when closed with 'SaveSettings'.
                 </p>
                 
+                <p class="text02"><h3>Key Binding Explanation</h3></p>
+                <p  class="text02">Here, we will explain the addition of new key bindings using Enhanced Input.</p>
+                <ol>
+                    <li class="borderbox"><p class="text02">First, follow the usual procedure to write Enhanced Input in BP_ThirdPersonCharacter. Please refer to the official documentation at <a href='https://docs.unrealengine.com/5.3/en-US/enhanced-input-in-unreal-engine/'>here</a> for details.<br>For example, please create a node that displays 'Test' in PrintString when right-clicked, as shown in the following image.<br><br></p>
+                        <a href="./images/T_Explanation05.png"><image src="./images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
+                        <a href="./images/T_Explanation06.png"><image src="./images/T_Explanation06.png" class="Explanation" alt="Explanation"></a>
+                    </li>
+                    
+                    <li  class="borderbox"><p class="text02">Open 'WG_KeyBindings' from the 'Widget' folder.<br>Duplicate one of the 'Horizontal Boxes' inside the 'Vertical Box', including all of its contents.<br>Here, the text has been set to 'Test' for easier understanding.<br><br>Select the 'InputKeySelector' inside the newly duplicated 'Horizontal Boxes', <br>then click on 'On Key Selected' in the 'Details panel' to create an 'On Key Selected Event'.<br><br><a href="./images/T_Explanation07.png"><image src="./images/T_Explanation07.png" class="Explanation" alt="Explanation"></a></li>
+                    
+                    <li class="borderbox"><p class="text02">Please assemble nodes as shown in the diagram below, or similar to other key selectors.<br>This process alone allows you to change the supported keyboard layout temporarily,<br>but it reverts to the default after the game session ends.<br>Therefore, next, you need to save the modified keyboard data once.<br><br><br>                        <a href="./images/T_Explanation08.png"><image src="./images/T_Explanation08.png" class="Explanation" alt="Explanation"></a><br></p></li>
+                    
+                    <li class="borderbox"><p class="text02">Open 'BP_SaveGameData' inside the 'Data' folder and create a variable with the type 'Key'.<br>For this example, the name of this variable has been set to 'RightClickKey'.<br><br><a href="./images/T_Explanation09.png"><image src="./images/T_Explanation09.png" class="Explanation" alt="Explanation"></a><br></p><p class="text02">Next, open the functions 'SetSaveKeyBindingData' and 'GetSaveKeyBindingData'.<br>Integrate 'RightClickKey' as shown in the following diagram.<br><br><a href="./images/T_Explanation10.png"><image src="./images/T_Explanation10.png" class="Explanation" alt="Explanation"></a></p></li>
+                    
+                    <li class="borderbox"><p class="text02">Open 'WG_Option' in the Widget folder.<br> Connect functions 'CreateSaveGame,' 'LoadKeyBindingData,' and 'OverwriteSave' in 'WG_Option' as shown in the image. <br>Then connect the pin from 'LoadGame.'<br><br><a href="./images/T_Explanation11.png"><image src="./images/T_Explanation11.png" class="Explanation" alt="Explanation"></a><a href="./images/T_Explanation12.png"><image src="./images/T_Explanation12.png" class="Explanation" alt="Explanation"></a></p></li>
+                    
+                    <li class="borderbox"><p class="text02">Open 'WG_KeyBindings' in the Widget folder.<br>Open the function named 'SetReMappingsText.'<br>Then, assemble the nodes as shown in the image. <br>With this, the settings will be saved even when the window is closed.<a href="./images/T_Explanation13.png"><image src="./images/T_Explanation13.png" class="Explanation" alt="Explanation"></a><br><br></p></li>
+                    
+                </ol>
             </ol>
         </div>
     </section>
