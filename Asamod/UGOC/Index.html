@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    
+<head>
+    <title>Ultimate Graphic Optimizer and Compressor</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="ugoc.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>ARK:Survival Ascended MOD</h1>
+    <section class="BGimage"></section>
+    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for Download !<br></p></div>
+    </section>
+ 
+    <section>
+        <div class="content-box">
+            <h2 class="QuickStart">Quick Start Guide</h2>
+            <ol>
+                <li>
+                    <p id="Mobile" class="text02">This page will provide a brief explanation, quick start guide, and tutorial for this mod.</p>
+                </li>
+
+                <p class="image">
+                    <a href="./images/T_Explanation.png"><image src="./images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
+                </p>
+
+                <p class="text01">When you enter ARK, please go to the MOD section first. Next, search for 'Ultimate Graphic Optimizer and Compressor.'<br>It should come up if you search for 'Ultimate' or something similar.
+
+<li>
+                    <p class="text02">Install</p>
+                    <p class="text02">
+                        Please install it as shown in the image below.<br>It may take a while to complete the installation.<br>In addition to the main content, there are several specially optimized meshes, so please be aware that it requires some storage space. <br>Depending on future updates, the storage space required may increase a bit, so please ensure you have sufficient space available.
+                    </p>
+                    <p class="image">
+                        <a href="./images/T_Explanation00.png"><image src="./images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
+                    </p>
+                </li>
+
+                <p class="text02"><h3>CREATE OR RESUME GAME</h3></p>
+
+                <p class="text02">
+                    Go to the Game Settings screen from CREATE OR RESUME GAME, then navigate to MOD SETTINGS → AVAILABLE MODS → ACTIVATE MOD to activate the mod. <br>Once activated, you should see an 'A' mark on the mod that is selected in yellow, and the name should appear in the ACTIVE MODS section.<br><br>
+                    <a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a>
+                    <br><br>Once you've reached this point, you can start the game.<br>This mod includes customization of the core game system. <br>Therefore, during installation, all equipment being worn and items in the inventory may be deleted. <br>While I experienced this once during debugging, it's uncertain if it was due to the mod or an issue with the game itself. <br>Well, the game is still in development, and so is this mod. <br>Please install with caution.<br>
+                    Therefore, when introducing this mod, it is advisable to deposit all possessions in a safe place and perform a respawn. <br>Please be careful during installation.<br>
+                </p>
+
+                <p class="text02"><h3>Ultimate Graphic Optimizer and Compressor<br>How to use explanation</h3></p>
+                <br>
+                <br>
+                <a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
+                <p class="text02">
+                    Let's move on to the MOD explanation.<br>This MOD is currently under development. <br>It is designed to enhance the graphic environment of Ark and ensure smooth operation even on low-spec PCs.
+                    When using it, please press the F8 key. <br>First, try pressing ALL IN. With just this, you should notice significant changes in graphics and optimization. <br>For those who simply want to make things faster and have issues with their GPU, this might be all you need.<br>Additionally, as a side note, since it seems that manipulating the gamma value does not work, I have set it for use with the fixed functions of F1 and F2.<br>
+                    <br>-To Japanese Users-<br><br>Currently, there are several issues confirmed to occur only in the Japanese environment, and problems are indeed arising. <br>One of them is a mysterious bug where, after pressing the F8 key for UI display input during debugging, F8 stops working after several seconds to minutes.<br>After careful consideration, it has been determined that addressing this bug within the MOD is almost impossible.<br><br>As a workaround, it seems that installing and applying the <span><a href="https://www.google.co.jp/ime/" alt="keyboard link" target="_blank">Google Keyboard</a></span> from this source resolves this bug in my development environment. <br>I hope users can apply this solution on their end.<br>While we are still addressing issues in this recently released game, we appreciate your understanding and patience. The remaining detailed features will be explained in the section below.<br><br>
+                </p>
+
+                <p class="text02">
+                    <h3>Functional explanation</h3>
+                </p>
+
+                <p class="text02">
+                    <ul>
+                        <li class="dot">
+                            Hide Nearby Actors
+                            <p class="text02">
+                                Mainly, this feature will render objects, excluding buildings near survivors containing wood and gatherable items, invisible. <br>This is an unavoidable process for graphic improvement, and these objects are not actually destroyed and disappear. <br>They just become invisible. <br>Large rocks and trees may seem to have disappeared at first glance, but they do exist in those locations.<br>
+                                <br>Therefore, when flying on creatures like Argentavis, be cautious as you may collide with these objects if they were present. <br>Rexes walking on rocks may appear to be floating.<br>
+                                This feature could be useful when searching for specific dinosaurs.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Hide Distant Actors
+                            <p class="text02">
+                                Contrary to 'Hide Nearby Actors,' this feature renders distant objects invisible. <br>Although they may occasionally be visible during loading, they will become invisible again after a while.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Lowest User Settings
+                            <p class="text02">
+                                You can lower the quality even more than the low-quality settings available in the regular ARK user settings. <br>This is primarily suitable for those who want to speed up their game performance at all costs.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Lowest Sky Cloud Settings
+                            <p class="text02">
+                                'r.VolumetricCloud 0' and 'Fog 0' have similar behavior, but in reality, this setting may be slightly lighter as it also consolidates the invisibility of finer details, such as child elements.
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Compression Nanite Meshes and Textures
+                            <p class="text02">
+                                This is currently applied only to the red obelisk. <br>The fundamental mesh vertices are reduced to about 1/20, and textures are compressed from 8K and 4K classes to 512px, minimizing the impact on appearance. <br>This is a very labor-intensive process, so please be patient. <br>We will continue to add this to other areas in future updates.
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Erase All Shadow
+                            <p class="text02">
+                                It behaves the same as 'r.ShadowQuality 0'.
+                            </p>
+                        </li>
+                        <li class="dot">
+                            FXAA and NoMSAA Anti-Aliasing
+                            <p class="text02">
+                                It reverts the anti-aliasing method to the one used in the ASE era. <br>However, the effect may not be significant, and it produces noticeable jagged edges, so I personally do not recommend it. <br>It may be removed in future updates.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Compression Ocean
+                            <p class="text02">
+                                The content I highly recommend in this MOD is as follows. <br>It recreates the compression mesh and material for the sea, replacing them without significantly altering the appearance. <br>It behaves differently from 'r.Water.SingleLayer.Reflection 0,' and even with optimization, you should be able to observe reflections and waves normally. <br>Additionally, you can apply 'r.Water.SingleLayer.Reflection 0' with a command, but I believe it's become unnecessary when combined with others. <br>If you really want to make it a bit lighter, feel free to use it at your discretion.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Other Console Commands
+                            <p class="text02">
+                                You can apply console commands that may relatively lighten the load in one go. <br>These commands are mainly used for Lumen and LOD-related optimizations.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            MOD Active Key
+                            <p class="text02">
+                                This is the key binding configuration to open the UI. <br>To change it, click on where it is initially set as F8 and input the desired key on your keyboard. <br>This setting is initialized when the game is closed and cannot be saved, so please be careful the next time you launch the game.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Gamma 1
+                            <p class="text02">
+                                Since the regular keyboard gamma setting wasn't available, I made one as well. <br>You can also change the value by clicking on the back numbers and typing. <br>The other details and specifications are the same as the MOD Active Key.<br>
+                            </p>
+                        </li>
+                        <li class="dot">
+                            Gamma 2
+                            <p class="text02">
+                                The same is gamma 2.
+                            </p>
+                        </li>
+                        <br>
+                        <p class="text02">Taking all of the above into consideration, here are my recommended settings for the final configuration:</p>
+                        <a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>
+                        <p class="text02">Thank you for reading up to this point! I hope this MOD contributes to a better ARK experience for everyone. </p>
+                        <p class="text02">Creator: Gliese Regulus</p>
+                        <div class="twitter">
+                            <a href="https://twitter.com/flaiceYH">
+                                <img class="img" src="https://glieseregulus.github.io/game/Twitter.png" alt="Twitter img">
+                            </a>
+                            <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m a former studio musician. I&#39;ve been unemployed for about two years now due to COVID. I&#39;m running out of money, and I&#39;ll probably lose my home soon. Lately,as a hobby, I&#39;ve been making games with Unreal Engine.<br>I&#39;ve released around 25 songs as a hobby, or maybe not. (=ﾟωﾟ)ﾉ</p>&mdash; グリーゼ レグレス (@flaiceYH) <a href="https://twitter.com/flaiceYH/status/1728611047374983654?ref_src=twsrc%5Etfw">November 26, 2023</a></blockquote>
+                            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                        </div>
+                    </ul>
+                </p>
+
+            </ol>
+        </div>
+    </section>
+ 
+    <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
+
+</body>
+</html>
