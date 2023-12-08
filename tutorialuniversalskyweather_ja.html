@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    
+<head>
+    <title>Universal Sky Weather</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="gliesestyletutorial.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Unreal Engine Asset Tutorial</h1>
+    <section class="BGimage"></section>
+    <section><div class="content-box"><p class="text01">このアセットをご購入いただきまして誠にありがとうございます。<br></p></div>
+    </section>
+ 
+    <section>
+        <div class="content-box">
+            <h2 class="QuickStart">Quick Start Guide</h2>
+            <ol>
+                <li>
+                    <p id="Mobile" class="text02">このページでは、このアセットの使用方法について簡単に説明します。<br>MobilePreviewを使用している場合は、アウトライナで 'BP_SkyColoud' を選択し、詳細パネルでモバイルのチェックボックスを有効にしてください。
+                    </p>
+                </li>
+                
+                <p class="image"><a href="T_Explanation.png"><image src="T_Explanation.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                
+                <p class="text02">
+                    これまでの操作で、少なくとも現時点では MobilePreview でのレンダリングができるはずです。</p>
+                
+                <p class="text02">
+                    モバイル開発環境でこの操作を行っていない場合、雲は表示されません。<br><br>プロジェクトを正しくパッケージングすると確認できます。<br><br>したがって、スタートアップフェーズでプロジェクトをパッケージ化するか、所望の環境でデバッグを行うことが推奨されています。
+                </p>
+                
+                <li>
+                    <p class="text02">
+                        操作の手順については、<a href="#UsePC">Use PC</a> と <a href="#UseAndroid">Use Android</a> を参照してください。
+                    </p>
+                    <p class="text02">そして、ここではいくつかのカスタム機能について説明します。<br>このアセットでは、主に 'BP_SkyCloud' というブループリントを使用します。<br>まず、World OutlinerのDetailsパネルから操作可能な変数を説明します。
+                    </p>
+                </li>
+                
+                <p class="text02"><h3>Date</h3>
+                </p>
+                
+                <p class="text02">ゲームの開始時に、ゲーム内の年/月/日を設定します。<br><br>開始日から日が経過すると自動的に増加します。<br>これは 'BP_SkyCloud' ブループリントの TickGraph で構成されています。<br><br>たとえば、各月を均等に30日にするか、各月の日数を調整したい場合は、コメント 'A system that sets and increments the end of a day, the end of a month, and the end of time' 内の SelectNode の 'int' 値を変更してください。<br><br>明確に言うと、Option0 は使用されません。 Option1 は1月を表し、Option2 は2月を表します... といった具体的な設定ができます。
+                </p>
+                
+                <p class="text02"><h3>Time</h3>
+                </p>
+                
+                <p class="text02">
+                <ul>
+                    <li class="dot">Solar Time
+                        <p class="text02">この変数は、ゲームの開始時点での開始時間を表します。<br>Construction Scriptに接続されていますので、夜だけのコンテンツや朝だけのコンテンツを作成する際に、太陽の適切な状態を設定することで、作業をスムーズに進めることができます。</p>
+                    </li>
+                    
+                    <li class="dot">Time Scale
+                        <p class="text02">この変数は、ゲーム内の時間が進む速度を表します。<br>値が小さいほど（小数も含む）、進行が速くなり、大きな値は進行を遅くします。<br>0に設定すると時間の経過が完全に停止します。</p>
+                    </li>
+                </ul>
+                </p>
+                
+                <p class="text02"><h3>Settings</h3>
+                </p>
+                
+                <p class="text02">
+                <ul>
+                    <li class="dot">Mobile
+                        <p class="text02">
+                            最初に<a href="#Mobile">こちら</a>で説明された内容を参照してください。</p>
+                    </li>
+                    <li class="dot">Random Weather
+                        <p class="text02">このチェックボックスがTrueに設定されている場合、天候はゲーム開始から1日おきにランダムに選択されます。<br>ただし、これはエディタのビューポートには反映されません。<br>Falseに設定されている場合、天候は以下のエディタの天候選択で指定されたものに固定されます。</p>
+                    </li>
+                    <li class="dot">Auto Weather Update
+                        <p class="text02">天気の更新を毎日0:00に行うかどうかを設定できます。<br>基本的には、上記の 'Random Weather' がTrueに設定されているときに異なる天気をランダムに選択するために使用されます。<br>（同じ天気が選択される場合があります。）<br>固定の天気を使用したい場合は、Falseに設定できます。</p>
+                    </li>
+                    <li class="dot">Editor Weather Selection
+                        <p class="text02">デフォルトの天気をビューポートおよび固定シナリオで使用する天気を設定するために、いくつかの天気オプションを選択できます。<br>PIE（エディタ内で再生）モードとは異なり、パーティクルは生成されません。<br><br>また、'Clear Sky' が選択されている場合、初期設定で雲のない晴れた青空を表します。<br>そのため、'Clear Sky' の間は雲が表示されません。<br>さらに、プレビューレンダリングレベルの設定によっては、霧、雨、およびその他の効果の可視性が異なるか、見えにくくなる場合があります。<br><br>使用するデバイスや仕様に基づいてこれらの設定を調整してください。</p>                        
+                    <p class="text02"><h3 class="text03">注意</h3></p>
+                    <p class="text02">'Editor Weather Selection' の内容を変更したい場合、雲の密度やテクスチャなどの設定を変更するには、'BP_SkyCloud' 内の 'Set Cloud System' ファンクションノードにアクセスし、各天気に対応する変数を操作してください。</p>
+                    </li>
+                </ul>
+                </p>
+            </ol>
+        </div>
+    </section>
+ 
+    <section><div class="content-box"><h2 ID="UsePC">Use PC</h2></div><p class="text02 image"><image src="T_ArrowKey.png" class="Explanation" alt="Explanation"></p>
+    </section>
+    
+    <section>
+        <div class="content-box"><h2 ID="UseAndroid">Use Android</h2><p><image src="T_AndroidUI.png" class="Explanation" alt="Explanation"></p><p class="text01">
+          <ol>
+            <li>年/月/日（ゲーム内）</li>
+            <li>時間</li>
+            <li>天気アイコン（自動）</li>
+            <li>クリックで切り替え可能。フィートまたはキロメートル</li>
+            <li>天気更新がTrueの場合、天気を更新します。</li>
+            <li>これをクリックすると、大気圏を抜け上昇します。（主にデバッグ目的です。）</li>
+            <li>このバーを右に移動すると、ゲームのスピードが遅くなります。（ただし、最も左にある位置では時間が停止します。）</li>
+            <li>Shift + F1を押してマウスを解放します。<br>そして再びここをクリックすることでマウスを捕まえます。<br>（マウスが捕まっている間と開いている間で表示が変わります。）</li>
+            <li>遠くに移動したい場合、主にデバッグ目的で<br> クリックしてポーンのスピードを上げると、ポーンは非常に速く移動します。</li>
+            <li>手動操作で上げたり下げたりできます。</li>
+            <li>ゲームを終了し、ウィンドウを閉じます。</li>
+           </ol>
+        </p></div>
+    </section>
+
+    <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
+
+</body>
+</html>
