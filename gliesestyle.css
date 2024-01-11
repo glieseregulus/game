@@ -128,7 +128,7 @@ body {
     opacity: 1;
 }
 .modals .cont {
-    overflow: auto;
+    overflow: hidden;
 }
 .modals p {
     margin: 0 0 1em;
