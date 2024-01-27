@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    
+<head>
+    <title>Page Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="PageTemplate.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Unreal Engine Asset Tutorial</h1>
+    <section class="BGimage"></section>
+    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br></p></div>
+    </section>
+ 
+    <section>
+        <div class="content-box">
+            <h2 class="QuickStart">Quick Start Guide</h2>
+            <ol>
+                <li>
+                    <p id="Mobile" class="text02">This page will provide a brief explanation of how to use this asset here.<br><br>When thinking about settings for different development environments and considering the specifications of the PCs that customers will use in Unreal Engine 5, I often ponder various issues.<br><br>For instance, I wonder, 'It works in my development environment, but how will it perform on lower-spec systems?' UserSettings-related problems always seem to persist. For example, not being able to discern the differences between UserSettings before and after changes, or making abrupt changes that cause the PC to become unresponsive and sluggish.<br><br>That's when I had an idea: what if you could make changes while observing their impact? I pondered this and created an asset that is as user-friendly as possible and considers the environment – and that's where 'SpinBoxSettings' comes into play.<br><br>This asset allows you to adjust settings while previewing them when you are configuring User Settings. With this, you can develop while fine-tuning your development environment and shader load.<br>
+                    </p>
+                </li>
+                
+                <p class="image"><a href="./images/T_Explanation.png"><image src="./images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                
+                <p class="text01">The user interface consists mainly of just two elements.<br><br>&#9312 Settings<br><span class="inline01">You can open user settings with this button.</span><br>&#9313Mouse Capture Status<br><span class="inline01">This status automatically detects the mouse capture state.</span><br><span class="inline01">It is displayed for your convenience only during the initial startup.</span><br><span class="inline01">Therefore, if you find out that you can release mouse capture with 'Shift + F1', you can remove it.</span>
+                </p>
+                
+                <li>
+                    <p class="text02">Internal Explanation of UserSettings</p>
+                    <p class="text02">Contents - SpinBoxSettings - Please open the WG_Settings widget.<br>When you want to add additional options, it is recommended to add items to the Vertical Box inside the Designer's hierarchy.<br>Also, inside the SpinBoxGraph in the graph, you will find the main SpinBox nodes, so if you want to add custom items, setting up nodes in a similar way may be a good idea.
+                    </p>
+                    <p class="image"><a href="./images/T_Explanation00.png"><image src="./images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
+                    </p>
+                </li>
+                
+                <p class="text02"><h3>About Print Strings During Debugging</h3>
+                </p>
+                
+                <p class="text02">Contents - SpinBoxSettings -　Blueprints - Please open the GM_SpinboxSettings.<br>If you set the default value of Debug in Variable - Settings - Debug to True,<br> you can check the current user settings with debug messages in the top left corner.<br>You may find it useful if needed.<br><br>
+                <a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                              
+                <p class="text02"><h3>About the Items Added to the Third-Person Template</h3>
+                </p>
+                
+                <p class="text02">
+                <ul>
+                    <li class="dot">Function
+                        <p class="text02">'SetCameraMode'<br>This adjusts the camera to focus on the player when Previewer becomes True. It returns to its original state when you set Previewer to False.<br>It is primarily set to False in the Construction Script.
+                        </p>
+                    </li>
+                    <li class="dot">Macro
+                        <p class="text02">'Macro_UIMouseSensitivity'<br>This is connected to the addControllerInput function in EnhancedActionEvent for adjusting Mouse Sensitivity.
+                        <br><br>
+                        'Macro_UISettingsBranch'<br>This is a macro that branches based on whether the UserSettings widget is displayed or not.
+                        </p>
+                    </li>
+                    <li class="dot">Variables
+                        <p class="text02">'PointLight'<br>This is spawned to prevent the character from getting dark when Camera Previewer becomes True. <br>It gets destroyed when it becomes False.<br>
+                        </p>
+                    </li>
+                    <li class="dot">EnhancedInputAction
+                        <p class="text02">'IA_click'<br>I created an input for left click in the input action.
+                        </p>
+                    </li>
+                </ul>
+                </p>
+                
+                <p class="text02"><h3>Viewport manipulation during Setting Mode</h3></p>
+                <br><br>
+                <a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
+                <p class="text02">During the setting operation, you can rotate and inspect the mesh from the right half of the viewport.
+                <br><br>
+                This operation can be performed by long-pressing and dragging the left mouse button. It automatically returns when closed with 'SaveSettings'.
+                </p>
+                
+                    <p class="text02"><h3>Information about the keyboard added to the save system and templates.</h3></p>
+                    <p class="text02">This asset includes a simple save system.<br>It is separate from the keyboard you have set in the key bindings.<br>It has been set up for your immediate use, for now.<br>The keyboard settings are in the image below.<br><br><a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>I will also briefly explain the save system.<br>In the initial setup, <br>pressing 'Save Settings' in the 'WG_Settings' widget returns you to the game and saves the settings. <br>Similarly, when you press the 'Exit Game' button, it also saves the settings. <br>As for 'Load', settings are not configured for keys other than the 2 key on the keyboard. <br>However, there's a variable called 'Auto Load' in 'WG_Option'. <br>If you want to autoload at the start of the game, set this to True. <br>It's inputted from 'Event Construct' in 'WG_Option'.<br>Also, a save data is created from 'WG_Option' Event Construct only during the game's first launch. <br>If you don't need this during development, you might consider deleting it. <br>Alternatively, you could manually incorporate it into the third key on the keyboard, <br>giving you the option to handle it manually.<br></p>
+                </ol>
+            </ol>
+        </div>
+    </section>
+ 
+    <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
+
+</body>
+</html>
