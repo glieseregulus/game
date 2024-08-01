@@ -38,26 +38,35 @@
                 <p class="text02"><h3>このアセットを使用する前のCSVの準備</h3>
                 </p>
                 
-                <p class="text02">あなたがこのアセットを使いやすいと感じられるように考えて私は設計しました。<br>その中でも、こういう用途はどうでしょう？<br>あなたが使いたいストーリーのCSVさえ作っておけば、異なるマップでも'BP_TalkCharacter'をアウトライナーに配置し、ゲームモードを設定するだけでデモマップのように使うことができます。<br>念の為に私が作った空のCSVテンプレートをこちらに置いておきますので使いたい人は<a href="https://drive.google.com/file/d/1QqBlHnkmIWXtBNHR1oLYisfqHFhEVRlX/view?usp=sharing" Target_"blank">ダウンロード</a>して使ってください。
+                <p class="text02">あなたがこのアセットを使いやすいと感じられるように考えて私は設計しました。<br>その中でも、こういう用途はどうでしょう？<br>あなたが使いたいストーリーのCSVさえ作っておけば、異なるマップでも'BP_TalkCharacter'をアウトライナーに配置し、ゲームモードを設定するだけでデモマップのように使うことができます。<br>念の為に私が作った空のCSVテンプレートをこちらに置いておきますので使いたい人は<a href="https://docs.google.com/spreadsheets/d/1ef-r55MmfWKk8lWRsCf8EoQ89Ac5twjTmTwgIIATbbk/edit?usp=sharing" Target_"blank">ダウンロード</a>して使ってください。
                 <p class="text02">
                 <ul>
                     <li class="dot">CharacterName, TextBodyについて
                         <p class="text02">まずは上のセクションでダウンロードしたプレーンのCSVファイルで解説します。<br><a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a><br>画像のCSVファイルのように今回は適当に打ち込んでいきます。<br>まず、名前とテキストは好きに書いてください。<br>あまり解説はいらないかもしれないです。<br>名前に関してです。<br>空欄になっている場合はテキストボックスごと消えるようになっています。<br>その場合ログも残りません。<br>テキスト本文に関しても特に言うことはありません。<br>Unreal Engineやスプレッドシートで書いている場合、本文の改行が必要なときは大抵Alt+EnterかCtrl+Enterで改行することができます。<br>なので、このことは覚えておきましょう。<br>
                         </p>
                     </li>
-                    <li class="dot">Animationについて
+                    <li class="dot">Animation
                         <p class="text02">Animationの場所にはアニメーションモンタージュの参照パスを入れるようにしてください。<br>下の画像を参考にしてください。<br>
                         <br><br>
                         <a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
-                        この時、選択するべきアニメーションはアニメーションシーケンスではなくアニメーションモンタージュにすることと、Copy File PathではなくCopy Referenceを選択することを注意してください。<br>今回はアセットに入れてあるサンプルアニメーションを順番に入れてみました。<br>
+                        この時、選択するべきアニメーションはアニメーションシーケンスではなくアニメーションモンタージュにすることと、Copy File PathではなくCopy Referenceを選択することを注意してください。<br>今回はアセットに入れてあるサンプルアニメーションを順番に入れてみました。<br><br>
+                        <a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>
                         </p>
                     </li>
-                    <li class="dot">Variables
-                        <p class="text02">'PointLight'<br>This is spawned to prevent the character from getting dark when Camera Previewer becomes True. <br>It gets destroyed when it becomes False.<br>
+                    <li class="dot">SpawnCamera
+                        <p class="text02">SpawnCameraはBoolean型ですのでTRUEかFALSEかでの記入が必要です。<br>一応使わない時でも間違いやバグのないように空欄ではなくFALSEと記入しておきましょう。<br>TRUEの場合、必ず次の項目のTargetLocationは記入しましょう。<br>もしもTRUEに設定した時にTargetLocationを記入しなかった場合、ワールドのLocationRotation0でScale1でカメラが原点に切り替わる設定になってしまいます。注意してください。<br><br>
+                        <a href="./images/T_Explanation04.png"><image src="./images/T_Explanation04.png" class="Explanation" alt="Explanation"></a>
+                        また、TextBodyがターゲットのキャラクターとの最後の会話の場合は必ずFALSEに設定してください。<br>そうしなければTRUEになった最後のカメラ位置でそれが固定されて戻れなくなります。<br>気をつけましょう。<br><br>
                         </p>
                     </li>
-                    <li class="dot">EnhancedInputAction
-                        <p class="text02">'IA_click'<br>I created an input for left click in the input action.
+                    <li class="dot">TargetLocation
+                        <p class="text02">SpawnCameraでも書いたように、SpawnCameraをTRUEにしたら必ず記入してください。<br>念の為にFALSEの時は原点を記入しておきましょう。<br><br>原点は<br>(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),<br>Translation=(X=0.000000,Y=0.000000,Z=0.000000),<br>Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))<br>です。<br><br>Scale3Dは必ず1にしましょう。<br>他のものを設定する意味がないですし、よくわからなくなります。<br><br>設定する位置はアナログな方法になってしまいますが、ビューポート左のPlaceActorsからCameraActorを選びワールドアウトライナーかビューポートにドロップしましょう。<br>カメラの位置や角度をビューポート右下のワイプを見ながらちょうど良くしましょう。<br><br>
+                        <a href="./images/T_Explanation05.png"><image src="./images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
+                        そして完成したトランスフォームの位置を確認して完了です。<br>この動作はトランスフォームの位置確認をするための行動なので追加したカメラは必要ないので削除しておきましょう。<br>
+                        </p>
+                    </li>
+                    <li class="dot">TargetTime
+                        <p class="text02">この値はサードパーソンカメラからTargetLocationにカメラが切り替わるまでの時間を入れてください。<br>この値はFloat変数での記入です。<br>数字で記入しましょう。<br>使わない場合は0を入れておくと良いです。<br>
                         </p>
                     </li>
                 </ul>
