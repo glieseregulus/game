@@ -12,7 +12,7 @@
 <body>
     <h1>Unreal Engine Asset Tutorial</h1>
     <section class="BGimage"></section>
-    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br></p></div>
+    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br><br>First of all, I want to apologize. I'm not good at English.<br></p></div>
     </section>
  
     <section>
@@ -20,23 +20,23 @@
             <h2 class="QuickStart">Quick Start Guide</h2>
             <ol>
                 <li>
-                    <p id="Mobile" class="text02">このアセットをインストールしてそのまま使う場合。<br><br>このセクションでは私と一緒にこのアセットを簡単に始めるためのクイックスタートをやっていきましょう！<br><br>まずはアセットをインストール後、そのまま使う場合あなたに確認してもらいたいことがあります。それは大抵のアセットで必要な設定です。ゲームモードを確認してください。プロジェクト設定のマップ&モードから見てもいいし、ワールド設定のGameModeから見てもいいです。<br><br>今回の画像はワールド設定のGameModeです。<br>BP_ThirdPersonGameModeの設定を変えて、赤線の部分が正しく設定されているかを確認してください。<br></p></li>
+                    <p id="Mobile" class="text02">If you install and use this asset as is,<br><br>In this section, let’s go through a quick start to easily get started with this asset together!<br><br>After installing the asset, if you want to use it as is, there are a few things I’d like you to confirm.This is a necessary setup for most assets.Please check the game mode.You can check this either from the Project Settings under Maps & Modes or from the World Settings under GameMode.<br><br>This image shows the GameMode from the World Settings.<br>Change the settings for BP_ThirdPersonGameMode and make sure the red-highlighted area is correctly set.<br></p></li>
                 
                 <p class="image"><a href="./images/T_Explanation.png"><image src="./images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
                 </p>
                 
-                <p class="text01">この3つの設定が正しくされているかを確認してください。<br><br>&#9312 GameMode Override<br><span class="inline01">BP_ThirdPersonGameMode</span><br>&#9313HUD Class<br><span class="inline01">HUD_Conversation</span><br>&#9314Player Controller Class<br><span class="inline01">PC_Conversation</span>
+                <p class="text01">Please check that these three settings are correctly configured.<br><br>&#9312 GameMode Override<br><span class="inline01">BP_ThirdPersonGameMode</span><br>&#9313HUD Class<br><span class="inline01">HUD_Conversation</span><br>&#9314Player Controller Class<br><span class="inline01">PC_Conversation</span>
                 </p>
                 
                 <li>
-                    <p class="text02">移行して使う場合</p>
-                    <p class="text02">このアセットをインストールした後に移行したい場合はこちらEpic公式を参考にしてみてください。<br><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/migrating-assets-in-unreal-engine?application_version=5.4" target="_blank">here</a><br>このアセットはできるだけ移行しやすいように作ってはありますがアセットの全てを移行しない場合は特性上、アニメーションブループリントや構造体などは移行しづらいかもしれません。<br><br>CSVは別でエクスポートしておくとエラーを出さずに移行できることが多いです。<br>特にアニメーションブループリントの'F_Conversation'構造体変数は移行するとエラーを発生しやすいので作り直す等の対応が必要かもしれません。</p>
+                    <p class="text02">If you are migrating and using it</p>
+                    <p class="text02">If you want to migrate after installing this asset, please refer to <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/migrating-assets-in-unreal-engine?application_version=5.4" target="_blank">here</a> for the Epic official guide.<br><br>This asset is designed to be as easy to migrate as possible, but if not all of the asset is migrated, due to its nature, animation blueprints and structures may be difficult to migrate.<br><br>Exporting the CSV separately often allows for migration without errors.<br>In particular, the 'F_Conversation' structure variable in the animation blueprint is prone to errors during migration, so you may need to recreate it or take other measures.</p>
                     <p class="image"><a href="./images/T_Explanation00.png"><image src="./images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
                     </p>
                 </li>
                 </ol>
                 
-                <center style="background: #184ea4;color: #fff;font-size: 24px;">-2つのUIモードについて-</center>
+                <center style="background: #184ea4;color: #fff;font-size: 24px;">-About the two UI modes-</center>
                 <ul>
                 <li>
                     <p id="Mobile" class="text02">Novel Mode</p>
@@ -45,51 +45,51 @@
                 <p class="image"><a href="./images/T_Explanation14.png"><image src="./images/T_Explanation14.png" class="Explanation" alt="Explanation"></a>
                 </p>
                 
-                <p class="text01">よくある日本のノベルゲームのようなUIで使うモードです。<br>これはアウトライナーに出したキャラクターのアニメーションをそのまま流用して表示することができるようになっています。<br><br>このモードではCSVで登録したカメラ設定をすべて無視します。<br>注意してください。</p>
+                <p class="text01">This is a mode used for a UI similar to those found in typical Japanese visual novels.<br>This allows you to reuse and display the animations of characters shown in the Outliner as they are.<br><br>This mode ignores all camera settings registered in the CSV.<br>Please note.</p>
                 
                 <li>
                     <p class="text02">Story Mode</p>
                     <p class="image"><a href="./images/T_Explanation15.png"><image src="./images/T_Explanation15.png" class="Explanation" alt="Explanation"></a></p>
-                    <p class="text02">このモードはアウトライナーに配置したキャラクターとの会話をする際、よりシームレスに見えるように会話の進行をさせていくモードです。<br><br>大切なシーンでカメラをキャラクターにフォーカスさせたり、サードパーソンカメラのままゲーム進行をさせることができます。</p>
+                    <p class="text02">This mode is designed to advance conversations with characters placed in the Outliner in a way that looks more seamless.<br><br>You can focus the camera on characters in important scenes or continue the game with the third-person camera.</p>
                 </li>
                 </ul>
-                <p class="text02">どちらのモードも切り替えはそれぞれのレベルブループリントのBeginPlayからHUD_ConversationにキャストしてMode変数にアクセスしてやっています。<br>あなたはどちらのモードを使うか、マップを試してみて決める必要があります。<br><br>Demoを使ってみて好きな方を使いましょう。</p>
+                <p class="text02">Switching between the modes is done by casting to HUD_Conversation from BeginPlay in each level blueprint and accessing the Mode variable.<br>You need to try the map and decide which mode to use.<br><br>Try using the Demo and choose the one you prefer.</p>
   
                 <p class="text02"><h2><center style="background: #184ea4;color: #fff;font-size: 40px;">-Tutorial-</center></h2>
                 </p>
-                <p class="text02"><h3>このアセットを使用する前のCSVの準備</h3>
+                <p class="text02"><h3>Preparing the CSV before using this asset</h3>
                 </p>
                 
-                <p class="text02">あなたがこのアセットを使いやすいと感じられるように考えて私は設計しました。<br>その中でも、こういう用途はどうでしょう？<br>あなたが使いたいストーリーのCSVさえ作っておけば、異なるマップでも'BP_TalkCharacter'をアウトライナーに配置し、ゲームモードを設定するだけでデモマップのように使うことができます。<br>念の為に私が作った空のCSVテンプレートをこちらに置いておきますので使いたい人は<a href="https://docs.google.com/spreadsheets/d/1ef-r55MmfWKk8lWRsCf8EoQ89Ac5twjTmTwgIIATbbk/edit?usp=sharing" Target_"blank">ダウンロード</a>して使ってください。
+                <p class="text02">I designed this asset with the intention of making it easy for you to use.<br>How about using it for this purpose?<br>As long as you create the CSV for the story you want to use, you can place 'BP_TalkCharacter' in the Outliner and set up the game mode in different maps to use it just like the demo map.<br>Just in case, I have provided a blank CSV template that I created. If you want to use it, please <a href="https://docs.google.com/spreadsheets/d/1ef-r55MmfWKk8lWRsCf8EoQ89Ac5twjTmTwgIIATbbk/edit?usp=sharing" Target_"blank">Download</a> it here.
                 <p class="text02">
                 <ul>
-                    <li class="dot">CharacterName, TextBodyについて
-                        <p class="text02">まずは上のセクションでダウンロードしたプレーンのCSVファイルで解説します。<br><a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a><br>画像のCSVファイルのように今回は適当に打ち込んでいきます。<br>まず、名前とテキストは好きに書いてください。<br>あまり解説はいらないかもしれないです。<br>名前に関してです。<br>空欄になっている場合はテキストボックスごと消えるようになっています。<br>その場合ログも残りません。<br>テキスト本文に関しても特に言うことはありません。<br>Unreal Engineやスプレッドシートで書いている場合、本文の改行が必要なときは大抵Alt+EnterかCtrl+Enterで改行することができます。<br>なので、このことは覚えておきましょう。<br>
+                    <li class="dot">About CharacterName and TextBody
+                        <p class="text02">First, I will explain using the plain CSV file downloaded from the section above.<br><a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a><br>This time, I will input data randomly, as shown in the CSV file in the image.<br>First, you can write the names and text body however you like.<br>There may not be much need for explanation.<br>Regarding names:<br>If left blank, the entire text box will be removed.<br>In that case, no log will be saved.<br>There is nothing specific to mention about the text body.<br>When writing in Unreal Engine or a spreadsheet, you can usually insert a line break by pressing Alt+Enter or Ctrl+Enter if needed.<br>So, keep this in mind.<br>
                         </p>
                     </li>
                     <li class="dot">Animation
-                        <p class="text02">Animationの場所にはアニメーションモンタージュの参照パスを入れるようにしてください。<br>下の画像を参考にしてください。<br>
+                        <p class="text02">Please enter the reference path for the animation montage in the Animation field.<br>Please refer to the image below.<br>
                         <br><br>
                         <a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
-                        この時、選択するべきアニメーションはアニメーションシーケンスではなくアニメーションモンタージュにすることと、Copy File PathではなくCopy Referenceを選択することを注意してください。<br>今回はアセットに入れてあるサンプルアニメーションを順番に入れてみました。<br><br>
+                        At this time, make sure to select an animation montage, not an animation sequence, and choose Copy Reference instead of Copy File Path.<br>This time, I have inserted the sample animations included in the asset in order.<br><br>
                         <a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>
                         </p>
                     </li>
                     <li class="dot">SpawnCamera
-                        <p class="text02">SpawnCameraはBoolean型ですのでTRUEかFALSEかでの記入が必要です。<br>一応使わない時でも間違いやバグのないように空欄ではなくFALSEと記入しておきましょう。<br>TRUEの場合、必ず次の項目のTargetLocationは記入しましょう。<br>もしもTRUEに設定した時にTargetLocationを記入しなかった場合、ワールドのLocationRotation0でScale1でカメラが原点に切り替わる設定になってしまいます。注意してください。<br><br>
+                        <p class="text02">SpawnCamera is a Boolean type, so you need to enter either TRUE or FALSE.<br>To avoid mistakes or bugs, even if you're not using it, make sure to enter FALSE instead of leaving it blank.<br>If TRUE, be sure to fill in the next field, TargetLocation.<br>If you set it to TRUE and do not fill in TargetLocation, the camera will default to the world origin with LocationRotation0 and Scale1. <br>Be aware of this.<br><br>
                         <a href="./images/T_Explanation04.png"><image src="./images/T_Explanation04.png" class="Explanation" alt="Explanation"></a>
-                        また、TextBodyがターゲットのキャラクターとの最後の会話の場合は必ずFALSEに設定してください。<br>そうしなければTRUEになった最後のカメラ位置でそれが固定されて戻れなくなります。<br>気をつけましょう。<br><br>
+                        Also, if the TextBody is the last conversation with the target character, be sure to set it to FALSE.<br>Otherwise, the camera will remain fixed at the last position where TRUE was set, and it won't return.<br>Be careful with this.<br><br>
                         </p>
                     </li>
                     <li id="TargetLocation" class="dot">TargetLocation
-                        <p class="text02">SpawnCameraでも書いたように、SpawnCameraをTRUEにしたら必ず記入してください。<br>念の為にFALSEの時は原点を記入しておきましょう。<br><br>原点は<br>(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),<br>Translation=(X=0.000000,Y=0.000000,Z=0.000000),<br>Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))<br>です。<br><br>Scale3Dは必ず1にしましょう。<br>他のものを設定する意味がないですし、よくわからなくなります。<br><br>設定する位置はアナログな方法になってしまいますが、ビューポート左のPlaceActorsからCameraActorを選びワールドアウトライナーかビューポートにドロップしましょう。<br>カメラの位置や角度をビューポート右下のワイプを見ながらちょうど良くしましょう。<br><br>
+                        <p class="text02">As mentioned with SpawnCamera, if you set SpawnCamera to TRUE, be sure to fill it in.<br>For safety, when it's set to FALSE, fill in the origin.<br><br>The origin is <br>Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),<br>Translation=(X=0.000000,Y=0.000000,Z=0.000000),<br>Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)<br><br>Always set Scale3D to 1. <br>Setting it to anything else doesn't make sense and can cause confusion.<br><br>Setting the position is a bit analog, but select CameraActor from the Place Actors on the left of the viewport and drop it into the World Outliner or the viewport.<br>Adjust the camera's position and angle while checking the wipe at the bottom right of the viewport.<br><br>
                         <a href="./images/T_Explanation05.png"><image src="./images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
-                        そして完成したトランスフォームの位置を確認して完了です。<br>この動作はトランスフォームの位置確認をするための行動なので追加したカメラは必要ないので削除しておきましょう。<br>ほんの少しのテクニックとして、このトランスフォームの入力はUnreal EngineにCSVをインポートした後に入力したほうが楽です。<br>一度全部原点で設定しておいてから後で設定するとプロジェクトを作りやすいです。<br>参考にしてみてください。<br>
+                        Finally, verify the completed transform position, and you're done.<br>This step is just for checking the transform position, so you can delete the added camera as it's no longer needed.<br>A small tip: it's easier to enter this transform data after importing the CSV into Unreal Engine.<br>Set everything to the origin first, then adjust later to make the project easier to manage.<br>Give it a try.<br>
                         </p>
                     </li>
                     <li class="dot">TargetTime
-                        <p class="text02">この値はサードパーソンカメラからTargetLocationにカメラが切り替わるまでの時間を入れてください。<br>この値はFloat変数での記入です。<br>数字で記入しましょう。<br>使わない場合は0を入れておくと良いです。<br><br><br>
-                        これで、CSVの準備が整いました。<br><br>
+                        <p class="text02">Enter the time it takes for the camera to switch from the third-person camera to the TargetLocation.<br>This value should be entered as a float variable.<br>Enter it as a number.<br>If not in use, it's best to enter 0.<br><br><br>
+                        With this, your CSV preparation is complete.<br><br>
                         <a href="./images/T_Explanation06.png"><image src="./images/T_Explanation06.png" class="Explanation" alt="Explanation"></a>
                         </p>
                     </li>
@@ -97,38 +97,38 @@
                 </p>
                 </p>
                 
-                <p class="text02"><h3>準備完了！CSVをリンクさせよう！</h3>
+                <p class="text02"><h3>Preparation complete! Let's link the CSV!</h3>
                 </p>
-                <p class="text02"><br><br>今後作業しやすいように一度、Unreal Engineの中の---CSVConversationNovel>Data>DT_Conversationと準備で作ったCSVをリンクさせておきたいです。<br>一番楽なのは元ある'DT_Conversation'に上書きしてしまうことです。<br>これならアニメーションブループリントの変数の参照をいじることなく使うことができるからです。<br>その他のやり方でやりたい場合、例えば、元のファイルをどうしても消したくない場合やバックアップを取ろうとする場合はアニメーションブループリントのF_Conversation変数の参照エラーを出さないように注意してやってください。<br>どうしても残しておきたい場合は新しく用意したCSVファイルの別のRowに例えば100番以降などに追加で記入しておいてもいいかもしれません。<br>今回大事なのはあくまでもアニメーションブループリントのF_Conversation変数のエラーを出すことなく、このアセットのコンテンツフォルダー内部の---CSVConversationNovel>Data>DT_Conversationとあなたが準備したCSVファイルをしっかりとリンクさせることです。<br><br>
-                ---CSVConversationNovel>Data>DT_Conversationが入っているフォルダをContent Drawerで表示させ、準備したCSVをドラッグアンドドロップして上書きしてください。<br>したがって、準備したファイルは同じファイル名でなければならないです。<br><br>
+                <p class="text02"><br><br>To make future work easier, I want to link the CSV file you prepared with DT_Conversation under ---CSVConversationNovel>Data in Unreal Engine.<br>The easiest way is to overwrite the existing 'DT_Conversation'.<br>This allows you to use it without modifying the references in the animation blueprint variables.<br>If you prefer another method, like keeping the original file or making a backup, be careful not to cause reference errors in the F_Conversation variable of the animation blueprint.<br>If you must keep the original, you might add the new CSV data to another row, like starting from row 100 or later.<br>The key here is to ensure that your prepared CSV file is properly linked with DT_Conversation under ---CSVConversationNovel>Data in the asset's content folder, without causing any errors in the F_Conversation variable of the animation blueprint.<br><br>
+                In the Content Drawer, display the folder containing ---CSVConversationNovel>Data>DT_Conversation, then drag and drop your prepared CSV to overwrite it.<br>Therefore, the prepared file must have the same file name.<br><br>
                 <a href="./images/T_Explanation07.png"><image src="./images/T_Explanation07.png" class="Explanation" alt="Explanation"></a>
                 </p>
                 
-                <p class="text02"><h3>異なるレベルで使ってみよう！</h3>
+                <p class="text02"><h3>Let's try using it in different levels!</h3>
                 </p>
-                <p class="text02"><br><br>わかりやすいように新規でレベルを作ってみましょう。<br>いつもと同じように普通のLevelを作ります。<br>クイックスタートでやったのと同じようにGamemodeを設定していきます。<br>PlayerStartをPlaceActorsから設置します。<br>
-                <br>画像の赤と同じようにレベルを設定していきます。<br><br>
+                <p class="text02"><br><br>Let's create a new level to make it easier to understand.<br>We'll create a standard level as usual.<br>Set up the Gamemode just like we did in the Quick Start.<br>Place a PlayerStart from the PlaceActors panel.<br>
+                <br>Set up the level as shown in the red area of the image.<br><br>
                 <a href="./images/T_Explanation08.png"><image src="./images/T_Explanation08.png" class="Explanation" alt="Explanation"></a>
-                PIEをプレイしてみましょう。<br>
-                下の画像のように上部UIが表示されていて、エラーが出ていない状態であればレベルの配置は完了です。<br>
-                キャラクターが通常通り動くかどうかも確認しておいてください。<br><br>
+                Let's play in PIE (Play In Editor).<br>
+                If the top UI is displayed and there are no errors, as shown in the image below, then the level setup is complete.<br>
+                Please also check to ensure that the character moves as expected.<br><br>
                 <a href="./images/T_Explanation09.png"><image src="./images/T_Explanation09.png" class="Explanation" alt="Explanation"></a>
-                BP_TalkCharacterを必要なキャラクターの数ワールドに配置します。<br>CSVのキャラクターネームに4体のキャラクターを書いていますので、4体配置してください。<br>
-                DetailsからCSVで対応したそれぞれの色にBP_TalkCharacterアクターを変更してみましょう。<br>
-                CSVではManny,MannyRed,MannyBlue,MannyGreenです。<br>
-                なので色をノーマル、赤、青、緑に変ておきましょう。<br><br>
+                Place the necessary number of BP_TalkCharacter actors in the world.<br>Since there are four characters listed in the CSV CharacterName, please place four characters.<br>
+                From the Details panel, change the BP_TalkCharacter actors to the corresponding colors as specified in the CSV.<br>
+                In the CSV, the characters are Manny, MannyRed, MannyBlue, and MannyGreen.<br>
+                So, change the colors to normal, red, blue, and green.<br><br>
                 <a href="./images/T_Explanation10.png"><image src="./images/T_Explanation10.png" class="Explanation" alt="Explanation"></a>
-                次はDetailsからそれぞれのCSVに対応したRowを設定しましょう。<br>
-                Detailsパネル>CSVCastカテゴリー>RowSelectorのプラスボタンを会話の数追加して対応するIndexを設定していきます。<br>
-                今回は特に変える意味もなかったので順番に設定していきますが、本来なら順番通りじゃなくても大丈夫です。<br>
-                例えばCSVでの設定さえしてあればここに50➔105➔1のような設定をしても対応した文章や設定が出力されます。<br>
-                CSVをたくさん設定して色々遊んでみてください。<br><br>
+                Next, let's set the Rows in the Details panel corresponding to each CSV.<br>
+                In the Details panel, under the CSVCast category, click the plus button in the RowSelector to add the number of conversations and set the corresponding Index.<br>
+                This time, we're setting them in order as there was no particular reason to change it, but it's fine if they aren't in order.<br>
+                For example, as long as it's configured in the CSV, you can set something like 50➔105➔1 here, and the corresponding text and settings will be output.<br>
+                Set up multiple CSVs and experiment with different configurations.<br><br>
                 <a href="./images/T_Explanation11.png"><image src="./images/T_Explanation11.png" class="Explanation" alt="Explanation"></a>
-                最後にCSVの準備セクションで少し話しましたが、スキップしたカメラの設定をやっていきます。<br>
-                CSVの下の画像部分に注目してください。<br><br>
+                Finally, as briefly mentioned in the CSV preparation section, we'll proceed with the skipped camera settings.<br>
+                Please refer to the image at the bottom of the CSV.<br><br>
                 <a href="./images/T_Explanation12.png"><image src="./images/T_Explanation12.png" class="Explanation" alt="Explanation"></a>
-                これを簡単に説明すると<br><br>&#9312MannyRedに話しかけた場合、インデックスが4になり、スポーンカメラがアクティブ、カメラをサードパーソンカメラから3秒でスポーンカメラに移動<br>&#9313MannyRedの会話2ページ目で、インデックスが5になり、名前が消え、スポーンカメラはアクティブのまま、スポーンカメラはそのままの値を打ち込んで移動はしないようにする。<br>&#9314MannyRedの会話3ページ目で、インデックスが6になり、名前は消えたまま、スポーンカメラはディアクティブになりサードパーソンカメラに戻し、スポーンカメラは原点に戻しておく。<br><br>
-                カメラ位置の設定については<a href="#TargetLocation">ここ</a>を参照してください。<br><br>そして決めた位置をCSVに戻って打ち込むより、UnrealEngine上でData>DT_ConverSation(DataTable)を開いて入力していきます。<br>私の場合はインデックス4にLocation(X940 Y320 Z130)Rotation(X0 Y0 Z-25)ぐらいがちょうど良さそうなので打ち込んでおきます。<br>同じようにインデックス5にも同じ値を打ち込みます。<br>この場合カメラ移動はしないのでTargetTimeは0です。<br>Row5の時に大切なはSpawnCameraをTRUEのままにしておくことです。<br>あくまでも、FALSEにする時はThirdpersonCameraに戻す時のみにしてください。<br><br>
+                To put it simply<br><br>&#9312When talking to MannyRed, the index will be 4. The spawn camera will be active, and the camera will switch from the third-person camera to the spawn camera within 3 seconds.<br>&#9313On the second page of MannyRed's conversation, the index will be 5. The name will disappear, and the spawn camera will remain active. The spawn camera will keep its current values and will not move.<br>&#9314On the third page of MannyRed's conversation, the index will be 6. The name will remain disappeared, the spawn camera will be deactivated and return to the third-person camera, and the spawn camera will be reset to the origin.<br><br>
+                Please refer to <a href="#TargetLocation">here</a> for camera position settings.<br><br>Instead of returning to the CSV to input the decided positions, open Data > DT_Conversation (DataTable) in Unreal Engine and enter the values there.<br>In my case, for index 4, Location(X940 Y320 Z130) and Rotation(X0 Y0 Z-25) seem to be just right, so I will enter these values.<br>Similarly, enter the same values for index 5.<br>In this case, since the camera will not move, set TargetTime to 0.<br>It is important to keep SpawnCamera set to TRUE for Row 5.<br>Only set it to FALSE when returning to the Third-person Camera.<br><br>
                     <a href="./images/T_Explanation13.png"><image src="./images/T_Explanation13.png" class="Explanation" alt="Explanation"></a>
                     
                 </p>
