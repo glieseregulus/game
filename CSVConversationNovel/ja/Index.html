@@ -6,10 +6,10 @@
     <title>Page Template</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="PageTemplate.css" rel="stylesheet">
+    <link href="../PageTemplate.css" rel="stylesheet">
 </head>
 
-<body>
+<body>s
     <h1>Unreal Engine Asset Tutorial</h1>
     <section class="BGimage"></section>
     <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br></p></div>
@@ -22,7 +22,7 @@
                 <li>
                     <p id="Mobile" class="text02">このアセットをインストールしてそのまま使う場合。<br><br>このセクションでは私と一緒にこのアセットを簡単に始めるためのクイックスタートをやっていきましょう！<br><br>まずはアセットをインストール後、そのまま使う場合あなたに確認してもらいたいことがあります。それは大抵のアセットで必要な設定です。ゲームモードを確認してください。プロジェクト設定のマップ&モードから見てもいいし、ワールド設定のGameModeから見てもいいです。<br><br>今回の画像はワールド設定のGameModeです。<br>BP_ThirdPersonGameModeの設定を変えて、赤線の部分が正しく設定されているかを確認してください。<br></p></li>
                 
-                <p class="image"><a href="./images/T_Explanation.png"><image src="./images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
+                <p class="image"><a href="../images/T_Explanation.png"><image src="../images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
                 </p>
                 
                 <p class="text01">この3つの設定が正しくされているかを確認してください。<br><br>&#9312 GameMode Override<br><span class="inline01">BP_ThirdPersonGameMode</span><br>&#9313HUD Class<br><span class="inline01">HUD_Conversation</span><br>&#9314Player Controller Class<br><span class="inline01">PC_Conversation</span>
@@ -31,7 +31,7 @@
                 <li>
                     <p class="text02">移行して使う場合</p>
                     <p class="text02">このアセットをインストールした後に移行したい場合はこちらEpic公式を参考にしてみてください。<br><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/migrating-assets-in-unreal-engine?application_version=5.4" target="_blank">here</a><br>このアセットはできるだけ移行しやすいように作ってはありますがアセットの全てを移行しない場合は特性上、アニメーションブループリントや構造体などは移行しづらいかもしれません。<br><br>CSVは別でエクスポートしておくとエラーを出さずに移行できることが多いです。<br>特にアニメーションブループリントの'F_Conversation'構造体変数は移行するとエラーを発生しやすいので作り直す等の対応が必要かもしれません。</p>
-                    <p class="image"><a href="./images/T_Explanation00.png"><image src="./images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
+                    <p class="image"><a href="../images/T_Explanation00.png"><image src="../images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
                     </p>
                 </li>
                 </ol>
@@ -42,14 +42,14 @@
                     <p id="Mobile" class="text02">Novel Mode</p>
                 </li>
                 
-                <p class="image"><a href="./images/T_Explanation14.png"><image src="./images/T_Explanation14.png" class="Explanation" alt="Explanation"></a>
+                <p class="image"><a href="../images/T_Explanation14.png"><image src="../images/T_Explanation14.png" class="Explanation" alt="Explanation"></a>
                 </p>
                 
                 <p class="text01">よくある日本のノベルゲームのようなUIで使うモードです。<br>これはアウトライナーに出したキャラクターのアニメーションをそのまま流用して表示することができるようになっています。<br><br>このモードではCSVで登録したカメラ設定をすべて無視します。<br>注意してください。</p>
                 
                 <li>
                     <p class="text02">Story Mode</p>
-                    <p class="image"><a href="./images/T_Explanation15.png"><image src="./images/T_Explanation15.png" class="Explanation" alt="Explanation"></a></p>
+                    <p class="image"><a href="../images/T_Explanation15.png"><image src="../images/T_Explanation15.png" class="Explanation" alt="Explanation"></a></p>
                     <p class="text02">このモードはアウトライナーに配置したキャラクターとの会話をする際、よりシームレスに見えるように会話の進行をさせていくモードです。<br><br>大切なシーンでカメラをキャラクターにフォーカスさせたり、サードパーソンカメラのままゲーム進行をさせることができます。</p>
                 </li>
                 </ul>
@@ -64,33 +64,33 @@
                 <p class="text02">
                 <ul>
                     <li class="dot">CharacterName, TextBodyについて
-                        <p class="text02">まずは上のセクションでダウンロードしたプレーンのCSVファイルで解説します。<br><a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a><br>画像のCSVファイルのように今回は適当に打ち込んでいきます。<br>まず、名前とテキストは好きに書いてください。<br>あまり解説はいらないかもしれないです。<br>名前に関してです。<br>空欄になっている場合はテキストボックスごと消えるようになっています。<br>その場合ログも残りません。<br>テキスト本文に関しても特に言うことはありません。<br>Unreal Engineやスプレッドシートで書いている場合、本文の改行が必要なときは大抵Alt+EnterかCtrl+Enterで改行することができます。<br>なので、このことは覚えておきましょう。<br>
+                        <p class="text02">まずは上のセクションでダウンロードしたプレーンのCSVファイルで解説します。<br><a href="../images/T_Explanation01.png"><image src="../images/T_Explanation01.png" class="Explanation" alt="Explanation"></a><br>画像のCSVファイルのように今回は適当に打ち込んでいきます。<br>まず、名前とテキストは好きに書いてください。<br>あまり解説はいらないかもしれないです。<br>名前に関してです。<br>空欄になっている場合はテキストボックスごと消えるようになっています。<br>その場合ログも残りません。<br>テキスト本文に関しても特に言うことはありません。<br>Unreal Engineやスプレッドシートで書いている場合、本文の改行が必要なときは大抵Alt+EnterかCtrl+Enterで改行することができます。<br>なので、このことは覚えておきましょう。<br>
                         </p>
                     </li>
                     <li class="dot">Animation
                         <p class="text02">Animationの場所にはアニメーションモンタージュの参照パスを入れるようにしてください。<br>下の画像を参考にしてください。<br>
                         <br><br>
-                        <a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
+                        <a href="../images/T_Explanation02.png"><image src="../images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
                         この時、選択するべきアニメーションはアニメーションシーケンスではなくアニメーションモンタージュにすることと、Copy File PathではなくCopy Referenceを選択することを注意してください。<br>今回はアセットに入れてあるサンプルアニメーションを順番に入れてみました。<br><br>
-                        <a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>
+                        <a href="../images/T_Explanation03.png"><image src="../images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>
                         </p>
                     </li>
                     <li class="dot">SpawnCamera
                         <p class="text02">SpawnCameraはBoolean型ですのでTRUEかFALSEかでの記入が必要です。<br>一応使わない時でも間違いやバグのないように空欄ではなくFALSEと記入しておきましょう。<br>TRUEの場合、必ず次の項目のTargetLocationは記入しましょう。<br>もしもTRUEに設定した時にTargetLocationを記入しなかった場合、ワールドのLocationRotation0でScale1でカメラが原点に切り替わる設定になってしまいます。注意してください。<br><br>
-                        <a href="./images/T_Explanation04.png"><image src="./images/T_Explanation04.png" class="Explanation" alt="Explanation"></a>
+                        <a href="../images/T_Explanation04.png"><image src="../images/T_Explanation04.png" class="Explanation" alt="Explanation"></a>
                         また、TextBodyがターゲットのキャラクターとの最後の会話の場合は必ずFALSEに設定してください。<br>そうしなければTRUEになった最後のカメラ位置でそれが固定されて戻れなくなります。<br>気をつけましょう。<br><br>
                         </p>
                     </li>
                     <li id="TargetLocation" class="dot">TargetLocation
                         <p class="text02">SpawnCameraでも書いたように、SpawnCameraをTRUEにしたら必ず記入してください。<br>念の為にFALSEの時は原点を記入しておきましょう。<br><br>原点は<br>(Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),<br>Translation=(X=0.000000,Y=0.000000,Z=0.000000),<br>Scale3D=(X=1.000000,Y=1.000000,Z=1.000000))<br>です。<br><br>Scale3Dは必ず1にしましょう。<br>他のものを設定する意味がないですし、よくわからなくなります。<br><br>設定する位置はアナログな方法になってしまいますが、ビューポート左のPlaceActorsからCameraActorを選びワールドアウトライナーかビューポートにドロップしましょう。<br>カメラの位置や角度をビューポート右下のワイプを見ながらちょうど良くしましょう。<br><br>
-                        <a href="./images/T_Explanation05.png"><image src="./images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
+                        <a href="../images/T_Explanation05.png"><image src="../images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
                         そして完成したトランスフォームの位置を確認して完了です。<br>この動作はトランスフォームの位置確認をするための行動なので追加したカメラは必要ないので削除しておきましょう。<br>ほんの少しのテクニックとして、このトランスフォームの入力はUnreal EngineにCSVをインポートした後に入力したほうが楽です。<br>一度全部原点で設定しておいてから後で設定するとプロジェクトを作りやすいです。<br>参考にしてみてください。<br>
                         </p>
                     </li>
                     <li class="dot">TargetTime
                         <p class="text02">この値はサードパーソンカメラからTargetLocationにカメラが切り替わるまでの時間を入れてください。<br>この値はFloat変数での記入です。<br>数字で記入しましょう。<br>使わない場合は0を入れておくと良いです。<br><br><br>
                         これで、CSVの準備が整いました。<br><br>
-                        <a href="./images/T_Explanation06.png"><image src="./images/T_Explanation06.png" class="Explanation" alt="Explanation"></a>
+                        <a href="../images/T_Explanation06.png"><image src="../images/T_Explanation06.png" class="Explanation" alt="Explanation"></a>
                         </p>
                     </li>
                 </ul>
@@ -101,35 +101,35 @@
                 </p>
                 <p class="text02"><br><br>今後作業しやすいように一度、Unreal Engineの中の---CSVConversationNovel>Data>DT_Conversationと準備で作ったCSVをリンクさせておきたいです。<br>一番楽なのは元ある'DT_Conversation'に上書きしてしまうことです。<br>これならアニメーションブループリントの変数の参照をいじることなく使うことができるからです。<br>その他のやり方でやりたい場合、例えば、元のファイルをどうしても消したくない場合やバックアップを取ろうとする場合はアニメーションブループリントのF_Conversation変数の参照エラーを出さないように注意してやってください。<br>どうしても残しておきたい場合は新しく用意したCSVファイルの別のRowに例えば100番以降などに追加で記入しておいてもいいかもしれません。<br>今回大事なのはあくまでもアニメーションブループリントのF_Conversation変数のエラーを出すことなく、このアセットのコンテンツフォルダー内部の---CSVConversationNovel>Data>DT_Conversationとあなたが準備したCSVファイルをしっかりとリンクさせることです。<br><br>
                 ---CSVConversationNovel>Data>DT_Conversationが入っているフォルダをContent Drawerで表示させ、準備したCSVをドラッグアンドドロップして上書きしてください。<br>したがって、準備したファイルは同じファイル名でなければならないです。<br><br>
-                <a href="./images/T_Explanation07.png"><image src="./images/T_Explanation07.png" class="Explanation" alt="Explanation"></a>
+                <a href="../images/T_Explanation07.png"><image src="../images/T_Explanation07.png" class="Explanation" alt="Explanation"></a>
                 </p>
                 
                 <p class="text02"><h3>異なるレベルで使ってみよう！</h3>
                 </p>
                 <p class="text02"><br><br>わかりやすいように新規でレベルを作ってみましょう。<br>いつもと同じように普通のLevelを作ります。<br>クイックスタートでやったのと同じようにGamemodeを設定していきます。<br>PlayerStartをPlaceActorsから設置します。<br>
                 <br>画像の赤と同じようにレベルを設定していきます。<br><br>
-                <a href="./images/T_Explanation08.png"><image src="./images/T_Explanation08.png" class="Explanation" alt="Explanation"></a>
+                <a href="../images/T_Explanation08.png"><image src="../images/T_Explanation08.png" class="Explanation" alt="Explanation"></a>
                 PIEをプレイしてみましょう。<br>
                 下の画像のように上部UIが表示されていて、エラーが出ていない状態であればレベルの配置は完了です。<br>
                 キャラクターが通常通り動くかどうかも確認しておいてください。<br><br>
-                <a href="./images/T_Explanation09.png"><image src="./images/T_Explanation09.png" class="Explanation" alt="Explanation"></a>
+                <a href="../images/T_Explanation09.png"><image src="../images/T_Explanation09.png" class="Explanation" alt="Explanation"></a>
                 BP_TalkCharacterを必要なキャラクターの数ワールドに配置します。<br>CSVのキャラクターネームに4体のキャラクターを書いていますので、4体配置してください。<br>
                 DetailsからCSVで対応したそれぞれの色にBP_TalkCharacterアクターを変更してみましょう。<br>
                 CSVではManny,MannyRed,MannyBlue,MannyGreenです。<br>
                 なので色をノーマル、赤、青、緑に変ておきましょう。<br><br>
-                <a href="./images/T_Explanation10.png"><image src="./images/T_Explanation10.png" class="Explanation" alt="Explanation"></a>
+                <a href="../images/T_Explanation10.png"><image src="../images/T_Explanation10.png" class="Explanation" alt="Explanation"></a>
                 次はDetailsからそれぞれのCSVに対応したRowを設定しましょう。<br>
                 Detailsパネル>CSVCastカテゴリー>RowSelectorのプラスボタンを会話の数追加して対応するIndexを設定していきます。<br>
                 今回は特に変える意味もなかったので順番に設定していきますが、本来なら順番通りじゃなくても大丈夫です。<br>
                 例えばCSVでの設定さえしてあればここに50➔105➔1のような設定をしても対応した文章や設定が出力されます。<br>
                 CSVをたくさん設定して色々遊んでみてください。<br><br>
-                <a href="./images/T_Explanation11.png"><image src="./images/T_Explanation11.png" class="Explanation" alt="Explanation"></a>
+                <a href="../images/T_Explanation11.png"><image src="../images/T_Explanation11.png" class="Explanation" alt="Explanation"></a>
                 最後にCSVの準備セクションで少し話しましたが、スキップしたカメラの設定をやっていきます。<br>
                 CSVの下の画像部分に注目してください。<br><br>
-                <a href="./images/T_Explanation12.png"><image src="./images/T_Explanation12.png" class="Explanation" alt="Explanation"></a>
+                <a href="../images/T_Explanation12.png"><image src="../images/T_Explanation12.png" class="Explanation" alt="Explanation"></a>
                 これを簡単に説明すると<br><br>&#9312MannyRedに話しかけた場合、インデックスが4になり、スポーンカメラがアクティブ、カメラをサードパーソンカメラから3秒でスポーンカメラに移動<br>&#9313MannyRedの会話2ページ目で、インデックスが5になり、名前が消え、スポーンカメラはアクティブのまま、スポーンカメラはそのままの値を打ち込んで移動はしないようにする。<br>&#9314MannyRedの会話3ページ目で、インデックスが6になり、名前は消えたまま、スポーンカメラはディアクティブになりサードパーソンカメラに戻し、スポーンカメラは原点に戻しておく。<br><br>
                 カメラ位置の設定については<a href="#TargetLocation">ここ</a>を参照してください。<br><br>そして決めた位置をCSVに戻って打ち込むより、UnrealEngine上でData>DT_ConverSation(DataTable)を開いて入力していきます。<br>私の場合はインデックス4にLocation(X940 Y320 Z130)Rotation(X0 Y0 Z-25)ぐらいがちょうど良さそうなので打ち込んでおきます。<br>同じようにインデックス5にも同じ値を打ち込みます。<br>この場合カメラ移動はしないのでTargetTimeは0です。<br>Row5の時に大切なはSpawnCameraをTRUEのままにしておくことです。<br>あくまでも、FALSEにする時はThirdpersonCameraに戻す時のみにしてください。<br><br>
-                    <a href="./images/T_Explanation13.png"><image src="./images/T_Explanation13.png" class="Explanation" alt="Explanation"></a>
+                    <a href="../images/T_Explanation13.png"><image src="../images/T_Explanation13.png" class="Explanation" alt="Explanation"></a>
                     
                 </p>
         </div>
