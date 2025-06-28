@@ -20,18 +20,18 @@
             <h2 class="QuickStart">Quick Start Guide</h2>
             <ol>
                 <li>
-                    <p id="Mobile" class="text02">Project Settings<br><br>インストール後アセットプロジェクトを起動したら、プロジェクト設定を開いてください。<br><br>レンダリング項目に移り、下のように設定してください。<br><br>Support global clip plane for Planar Reflections : True<br>Ray Traced Translucent Refractions : True<br>Motion Blur : False<br><br>下の画像は設定サンプルです。<br>
+                    <p id="Mobile" class="text02">Project Settings<br><br>After installing, open the asset project and go to the Project Settings.<br><br>Navigate to the Rendering section and configure the settings as shown below.<br><br>Support global clip plane for Planar Reflections : True<br>Ray Traced Translucent Refractions : True<br>Motion Blur : False<br><br>The image below shows a sample configuration.<br>
                     </p>
                 </li>
                 
                 <p class="image"><a href="./images/T_Explanation.png"><image src="./images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
                 </p>
                 
-                <p class="text01">当アセットではPlaner Reflection機能を使用しており<br>この設定は主にシャワー台に使っている鏡の反射で必須になる設定のようですので、鏡を絶対に使わない場合以外は設定してください。<br><br>お風呂のシステムだけの動作を使いたい場合、この設定は必要ないかもしれません。<br><br>Planer Reflectionについて詳しい設定を見たい人は<span><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/planar-reflections-in-unreal-engine" target="_blank" rel="epic">こちら</a></span>の公式ページを参考にしてみてください。</p>
+                <p class="text01">This asset uses the Planar Reflection feature,<br>This setting is essential mainly for mirror reflections used on the shower stands, so please enable it unless you’re absolutely not using mirrors.<br><br>If you only want to use the bath system functions, this setting might not be necessary.<br><br>If you want to see detailed settings about Planar Reflection, please refer to the official documentation <span><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/planar-reflections-in-unreal-engine" target="_blank" rel="epic">here</a></span></p>
                 
                 <li>
                     <p class="text02">Game Mode Settings</p>
-                    <p class="text02">当アセットには独自の専用Controller(PC_LuxurySpa)が内包されています。<br><br>今回はWorldSettingsで設定してあります。下の画像のようになっているかを確認し、なっていなければ同じように設定してください。
+                    <p class="text02">This asset includes its own custom controller (PC_LuxurySpa).<br><br>In this case, it is set up via WorldSettings. Please check that it’s set like the image below, and if not, configure it accordingly.
 		</p>
                     <p class="image"><a href="./images/T_Explanation00.png"><image src="./images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
                     </p>
@@ -39,31 +39,32 @@
 
 		 <li>
                     <p class="text02">Plugin</p>
-                    <p class="text02">Pluginが有効になっているかを確認してください。<br><br>項目は三つです。<br>GameplayStateTree<br>StateTree<br>NiagaraFluids<br><br>この三つです。</p>
+                    <p class="text02">Make sure the necessary plugins are enabled.<br><br>There are three plugins required.<br>GameplayStateTree<br>StateTree<br>NiagaraFluids<br><br>These three.</p>
                     <p class="image"><a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a>
                     </p>
                 </li>
 
 		<li>
                     <p class="text02">BP_ThirdpersonCharacter</p>
-                    <p class="text02">これはあくまで注意ですが、アセット移行後などでDemoフォルダーのThirdpersonTemplateを使わなかった場合<br>こちらのMeshのComponentTagにcolliderが設定されているか注意してください。<br><br>これがないとお湯に入ったときに波紋などのレンダリングがなくなります。<br><br></p>
+                    <p class="text02">This is just a heads-up: if you migrate the asset and don’t use the ThirdPersonTemplate folder under the Demo folder,<br>please make sure the 'collider' tag is added to the Mesh's ComponentTag.<br><br>Without this tag, the ripple rendering when entering the bath won’t appear.<br><br></p>
                     <p class="image"><a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
                     </p>
                 </li>
                 
-                <p class="text02"><h3>ゲーム上での操作</h3>
+                <p class="text02"><h3>In-Game Controls</h3>
                 </p>
                 
-        <p class="text02">わかりやすいようにキャラクターウィジェットのHUDで簡単な操作用UIを表示してありますが
-		<br>一応簡単に解説したいと思います。
-		<br> キャラクターがバスチェアにオーバーラップした時HUDが表示されます。
-		<br>Eキーで右手にアタッチします。<br>
-		<br><a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>		<br>キャラクターがバスチェアーを持っているとき、Qキーで椅子を外すことができます。
-		<br>デタッチした場合、バスチェアーは物理状態になります。<br>
-		<br>また、右手にバスチェアーがある状態で使用可なシャワーパーテションポイントとオーバーラップした時
-		<br>Eキーでシャワーを使うことができます。<br>
+        <p class="text02">A simple UI is shown through the character HUD widget for clarity, 
+		<br> but here’s a quick explanation.
+		<br> When the character overlaps with the bath chair, the HUD will appear.
+		<br>Press E to attach it to the right hand.<br>
+		<br><a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>		<br>When holding the bath chair, you can press Q to release it.
+		<br>Once detached, the chair becomes a physics object.<br>
+		<br>Also, while holding the bath chair in the right hand, 
+		<br> if you overlap with a usable shower partition point,<br>
+		<br>you can press E to use the shower.
 		<br><a href="./images/T_Explanation04.png"><image src="./images/T_Explanation04.png" class="Explanation" alt="Explanation"></a>
-		<br>温泉にも入ることができます。<br>ポイントにオーバーラップさせてEキーで温泉を楽しみます。Qキーで終わります。<br><br>
+		<br>You can also enter the hot spring.<br>Overlap with the entry point and press E to enjoy the bath. Press Q to exit.<br><br>
 		<a href="./images/T_Explanation05.png"><image src="./images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
 	</p>
                 </ol>
