@@ -7,143 +7,45 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="gliesestyle.css" rel="stylesheet">
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
 </head>
 
 <body>
-        <div class="lang">Language : <a href="index.html">EN</a> / <a href="index_jp.html">JA</a></div>
+    <div id="intro-video-wrapper">
+  <video
+    id="intro-video"
+    class="video-js"
+    autoplay
+    muted
+    playsinline
+    preload="auto"
+    data-setup='{}'
+  >
+    <source src="Movie/Portfolio.mp4" type="video/mp4" />
+  </video>
+</div>
+
+<script>
+  const player = videojs('intro-video');
+
+  player.ready(() => {
+    player.play();
+
+    setTimeout(() => {
+      player.pause();
+      player.dispose();
+      const wrapper = document.getElementById('intro-video-wrapper');
+      if (wrapper) {
+        wrapper.remove(); // ラッパーごと削除で邪魔なオーバーレイも一掃
+      }
+    }, 10000);
+  });
+</script>
+
     <div id="container">
-        <iframe src="UE4_23_Web-HTML5-Shipping.html" alt="UE4"></iframe>
+        <iframe src="UE423/Portfolio.html" alt="UE4"></iframe>
+        <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
     </div>
-
-    <section>
-        <div class="subarea">
-            <div class="nav">
-
-                <div class="row">
-                    <div class="col-sm-12">
-                        <a href="#modal1" class="button">What is?</a>
-                        <a href="https://www.unrealengine.com/marketplace/en-US/profile/GliesesStore" class="button" target="_blank">Unreal Engine Marketplace</a>
-                        <a href="https://legacy.curseforge.com/ark-survival-ascended/mods/ultimategraphicoptimizerandcompressor" class="button" target="_blank">Ark MOD</a>
-                        <a href="#modal2" class="button">Instructions for Handling the Above Content</a>
-                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSenWYdU3dd4EHT_mMjl8uvRJeUYXOzdV9Vk2xrh3WxmvmS18Q/viewform?embedded=true" class="button" target="_blank">Form(I hardly see this.)</a>
-                        <a href="https://www.youtube.com/channel/UCPDVzph2NOt5giED2Wz9ofA" class="button" target="_blank">YouTube</a>
-                        <a href="#modal3" class="button">Music</a>
-                    </div>
-                </div>
-
-                <div id="modal1" class="overlays">
-                    <a class="cancel" href="#"></a>
-                    <div class="modals background01">
-                        <h1>About This Site</h1>
-                        <div class="cont">
-                            <p class="shadow">
-                                This site is a work-in-progress portfolio.<br>
-                                <br>Games and websites are being developed using Unreal Engine.
-                                <br>To enable display on mobile devices, shaders on the web are deployed in a simplified form.
-                                <br>WebGL on UE doesn't typically work on regular smartphones, so we struggled a bit to incorporate it.
-                                <br>The game development itself is challenging (mainly due to financial constraints), so while this is a basic introduction site, please give it a try.
-                            </p>
-
-                            <p class="close"><a href="#"><button><img src="Close.png" alt="icon"></button></a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="modal2" class="overlays">
-                    <a class="cancel" href="#"></a>
-                    <div class="modals background03">
-                        <h2>Unreal Engine Marketplace</h2>
-                        <div class="cont">
-                            <p class="shadow">
-                                <div class='btn'>
-                                    <a href='https://glieseregulus.github.io/game/tutorialuniversalskyweather.html' target="_blank">Universal Sky Weather</a>
-                                </div>
-                            </p>
-                            <p class="close"><a href="#"><button><img src="Close.png" alt="icon"></button></a></p>
-                        </div>
-                        
-                        <div class="cont">
-                            <p class="shadow">
-                                <div class='btn'>
-                                    <a href='https://glieseregulus.github.io/game/SwipeAndPinchForMobile/Index.html' target="_blank">Swipe And Pinch For Mobile</a>
-                                </div>
-                            </p>
-                        
-                        <div class="cont">
-                            <p class="shadow">
-                                <div class='btn'>
-                                    <a href='https://glieseregulus.github.io/game/CSVConversationNovel/Index.html' target="_blank">Novel or Story Conversation For CSV</a>
-                                </div>
-                            </p>
-                            
-                            <div class="cont">
-                                <p class="shadow">
-                                    <div class='btn'>
-                                        <a href='https://glieseregulus.github.io/game/SpinBoxSettings/Index.html' target="_blank">SpinBoxSettings</a>
-                                    </div>
-                                </p>
-                            
-                            <p class="close"><a href="#"><button><img src="Close.png" alt="icon"></button></a></p>
-                        </div>
-                        
-                        <h2>Ark: Survival Ascended MOD : UltimateGraphicOptimizerandCompressor</h2>
-                        <div class="cont">
-                            <p class="shadow">
-                                <div class='btn'>
-                                    <a href='https://glieseregulus.github.io/game/Asamod/UGOC/Index.html' target="_blank">ASA MOD : UltimateGraphicOptimizerandCompressor</a>
-                                </div>
-                            </p>
-                            <p class="close"><a href="#"><button><img src="Close.png" alt="icon"></button></a></p>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="modal3" class="overlays">
-                    <a class="cancel" href="#03"></a>
-                    <div class="modals background03">
-                        <h2>Music</h2>
-                        <div class="cont">
-                            <ul>
-                                <li>
-                                    <div class="list clearfix">
-                                        <a href="https://big-up.style/Cu8pxlNPPY" target="_blank" class="linkbox">
-                                            <img src="https://img.big-up.style/users/96/264096/package/425276/d47d9f631dca31a58a8dac9531ac6583.jpg" class="thumbnail">
-                                        </a>
-                                        <h3 class="album"> <a href="https://big-up.style/Cu8pxlNPPY" target="_blank" class="linkbox">SAKEBI</a></h3>
-                                        <span class="streaming">Stream</span>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="list clearfix">
-                                        <a href="https://big-up.style/p48BsJQ4ek" target="_blank" class="linkbox">
-                                            <img src="https://img.big-up.style/users/96/264096/package/406586/e6dda44c352aa93bcc947b073c112850.jpg" class="thumbnail">
-                                        </a>
-                                        <h3 class="album"> <a href="https://big-up.style/p48BsJQ4ek" target="_blank" class="linkbox">UTAI</a></h3>
-                                        <span class="streaming">Stream</span>
-                                    </div>
-                                </li>
-                            </ul>
-                            <p class="close"><a href="#03"><img src="Close.png" alt="icon"></a></p>
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="twitter">
-                <a href="https://twitter.com/flaiceYH">
-                    <img class="img" src="Twitter.png" alt="Twitter img">
-                </a>
-                <blockquote class="twitter-tweet"><p lang="en" dir="ltr">I&#39;m a former studio musician. I&#39;ve been unemployed for about two years now due to COVID. I&#39;m running out of money, and I&#39;ll probably lose my home soon. Lately,as a hobby, I&#39;ve been making games with Unreal Engine.<br>I&#39;ve released around 25 songs as a hobby, or maybe not. (=ﾟωﾟ)ﾉ</p>&mdash; グリーゼ レグレス (@flaiceYH) <a href="https://twitter.com/flaiceYH/status/1728611047374983654?ref_src=twsrc%5Etfw">November 26, 2023</a></blockquote>
-                <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            </div>
-        </div>
-
-    </section>
-
-    <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
-
 </body>
 </html>
