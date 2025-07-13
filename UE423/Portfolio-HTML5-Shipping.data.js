@@ -173,6 +173,6 @@ Module['FS_createPath']('/Portfolio/Content', 'Paks', true, true);
   }
 
  }
- loadPackage({"files": [{"start": 0, "audio": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 53, "audio": 0, "end": 91, "filename": "/UE4CommandLine.txt"}, {"start": 91, "audio": 0, "end": 98093765, "filename": "/Portfolio/Content/Paks/Portfolio-HTML5.pak"}], "remote_package_size": 98093765, "package_uuid": "bd236ff3-fdce-4d15-85d0-3a771898468f"});
+ loadPackage({"files": [{"start": 0, "audio": 0, "end": 53, "filename": "/Manifest_NonUFSFiles_HTML5.txt"}, {"start": 53, "audio": 0, "end": 91, "filename": "/UE4CommandLine.txt"}, {"start": 91, "audio": 0, "end": 122428409, "filename": "/Portfolio/Content/Paks/Portfolio-HTML5.pak"}], "remote_package_size": 122428409, "package_uuid": "a63b73db-b61e-4236-a460-6e94244de7ff"});
 
 })();
