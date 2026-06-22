@@ -45,8 +45,8 @@ window.addEventListener('load', () => {
         if(workId === 'miki' || workId === 'leafa') {
             contentHtml = `
                 <p style="color:var(--text-sub); margin-bottom:20px;">作品の詳細情報やデモ映像などをここに掲載できます。</p>
-                <div style="background:#000; aspect-ratio:16/9; display:flex; justify-content:center; align-items:center; border:2px solid var(--neon-cyan);">
-                    <span style="color:var(--neon-cyan); font-weight:bold;">[ 3DCG / UE プロジェクトプレビュー ]</span>
+                <div style="background:#000; width:100%; aspect-ratio:16/9; border:2px solid var(--neon-cyan); position:relative;">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4YR2OxC8-es?si=AjowomgFpSKX-DgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>`;
         } else if(workId === 'fab') {
             contentHtml = `
