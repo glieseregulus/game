@@ -1,5 +1,4 @@
 window.addEventListener('load', () => {
-    // オープニングアニメーション終了でローダーを破棄
     gsap.to('#loader', {
         opacity: 0, 
         duration: 0.8, 
@@ -8,7 +7,6 @@ window.addEventListener('load', () => {
 
     gsap.registerPlugin(ScrollTrigger);
 
-    // ヒーローセクション登場
     gsap.from('.hero-content > *', {
         opacity: 0,
         y: 60,
@@ -17,7 +15,6 @@ window.addEventListener('load', () => {
         ease: "power3.out"
     });
 
-    // スクリューリガーを使ったセクションフェード表示
     gsap.utils.toArray('.section').forEach(sec => {
         const reveals = sec.querySelectorAll('.reveal');
         if (reveals.length > 0) {
@@ -36,29 +33,34 @@ window.addEventListener('load', () => {
         }
     });
 
-    // 各実績カードをクリックした際のポップアップ処理
     $('.work').on('click', function() {
         var workId = $(this).data('work');
         var title = $(this).find('h3').text();
         var contentHtml = "";
 
-        if(workId === 'miki' || workId === 'leafa') {
+        if(workId === 'miki') {
             contentHtml = `
-                <p style="color:var(--text-sub); margin-bottom:20px;">作品の詳細情報やデモ映像などをここに掲載できます。</p>
+                <p style="color:var(--text-sub); margin-bottom:20px;">MetaHuman キャラクター Miki のデモ映像です。</p>
                 <div style="background:#000; width:100%; aspect-ratio:16/9; border:2px solid var(--neon-cyan); position:relative;">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4YR2OxC8-es?si=AjowomgFpSKX-DgY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/4YR2OxC8-es" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
+                </div>`;
+        } else if(workId === 'leafa') {
+            contentHtml = `
+                <p style="color:var(--text-sub); margin-bottom:20px;">SAO Leafa 非公式同人プロジェクトのデモ映像です。</p>
+                <div style="background:#000; width:100%; aspect-ratio:16/9; border:2px solid var(--neon-cyan); position:relative;">
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/YH5QR0fkWZU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>`;
         } else if(workId === 'fab') {
             contentHtml = `
                 <p style="color:var(--text-sub); margin-bottom:20px;">販売中のBlueprintアセットやプラグイン等の詳細仕様をここに記載できます。</p>
                 <div style="background:#000; aspect-ratio:16/9; display:flex; justify-content:center; align-items:center; border:2px solid var(--neon-cyan);">
-                    <span style="color:var(--neon-cyan); font-weight:bold;">[ Fab Marketplace 開発データ ]</span>
+                    <span style="color:var(--neon-cyan); font-weight:bold;">[ Fab Marketplace 開発データダミー ]</span>
                 </div>`;
         } else {
             contentHtml = `
                 <p style="color:var(--text-sub); margin-bottom:20px;">Web制作プロジェクトのモックアップやデザインパーツのコード構造をここに掲載できます。</p>
                 <div style="background:#000; aspect-ratio:16/9; display:flex; justify-content:center; align-items:center; border:2px solid var(--neon-gold);">
-                    <span style="color:var(--neon-gold); font-weight:bold;">[ Web UI/UX 設計カンプ ]</span>
+                    <span style="color:var(--neon-gold); font-weight:bold;">[ Web UI/UX 設計カンプダミー ]</span>
                 </div>`;
         }
 
@@ -69,7 +71,6 @@ window.addEventListener('load', () => {
         $('#arena-popup').css('display', 'flex').hide().fadeIn(300);
     });
 
-    // モーダル枠外 or 閉じるボタンクリックでポップアップを非表示化
     $('#close-popup, #arena-popup').on('click', function(e) {
         if (e.target !== this && e.target.id !== 'close-popup') return;
         $('#arena-popup').fadeOut(300);
