@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    
+<head>
+    <title>Japanese Luxury Spa</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./PageTemplate.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Unreal Engine Asset Tutorial</h1>
+    <section class="BGimage"></section>
+    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br></p></div>
+    </section>
+ 
+    <section>
+        <div class="content-box">
+            <h2 class="QuickStart">Quick Start Guide</h2>
+            <ol>
+                <li>
+                    <p id="Mobile" class="text02">Project Settings<br><br>After installing, open the asset project and go to the Project Settings.<br><br>Navigate to the Rendering section and configure the settings as shown below.<br><br>Support global clip plane for Planar Reflections : True<br>Ray Traced Translucent Refractions : True<br>Motion Blur : False<br><br>The image below shows a sample configuration.<br>
+                    </p>
+                </li>
+                
+                <p class="image"><a href="./images/T_Explanation.png"><image src="./images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                
+                <p class="text01">This asset uses the Planar Reflection feature,<br>This setting is essential mainly for mirror reflections used on the shower stands, so please enable it unless you’re absolutely not using mirrors.<br><br>If you only want to use the bath system functions, this setting might not be necessary.<br><br>If you want to see detailed settings about Planar Reflection, please refer to the official documentation <span><a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/planar-reflections-in-unreal-engine" target="_blank" rel="epic">here</a></span></p>
+                
+                <li>
+                    <p class="text02">Game Mode Settings</p>
+                    <p class="text02">This asset includes its own custom controller (PC_LuxurySpa).<br><br>In this case, it is set up via WorldSettings. Please check that it’s set like the image below, and if not, configure it accordingly.
+		</p>
+                    <p class="image"><a href="./images/T_Explanation00.png"><image src="./images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
+                    </p>
+                </li>
+
+		 <li>
+                    <p class="text02">Plugin</p>
+                    <p class="text02">Make sure the necessary plugins are enabled.<br><br>There are three plugins required.<br>GameplayStateTree<br>StateTree<br>NiagaraFluids<br><br>These three.</p>
+                    <p class="image"><a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a>
+                    </p>
+                </li>
+
+		<li>
+                    <p class="text02">BP_ThirdpersonCharacter</p>
+                    <p class="text02">This is just a heads-up: if you migrate the asset and don’t use the ThirdPersonTemplate folder under the Demo folder,<br>please make sure the 'collider' tag is added to the Mesh's ComponentTag.<br><br>Without this tag, the ripple rendering when entering the bath won’t appear.<br><br></p>
+                    <p class="image"><a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
+                    </p>
+                </li>
+                
+                <p class="text02"><h3>In-Game Controls</h3>
+                </p>
+                
+        <p class="text02">A simple UI is shown through the character HUD widget for clarity, 
+		<br> but here’s a quick explanation.
+		<br> When the character overlaps with the bath chair, the HUD will appear.
+		<br>Press E to attach it to the right hand.<br>
+		<br><a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>		<br>When holding the bath chair, you can press Q to release it.
+		<br>Once detached, the chair becomes a physics object.<br>
+		<br>Also, while holding the bath chair in the right hand, 
+		<br> if you overlap with a usable shower partition point,<br>
+		<br>you can press E to use the shower.
+		<br><a href="./images/T_Explanation04.png"><image src="./images/T_Explanation04.png" class="Explanation" alt="Explanation"></a>
+		<br>You can also enter the hot spring.<br>Overlap with the entry point and press E to enjoy the bath. Press Q to exit.<br><br>
+		<a href="./images/T_Explanation05.png"><image src="./images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
+	</p>
+                </ol>
+            </ol>
+        </div>
+    </section>
+ 
+    <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
+
+</body>
+</html>

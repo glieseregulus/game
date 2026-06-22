@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+    
+<head>
+    <title>Novel or Story Conversation For CSV</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="PageTemplate.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Unreal Engine Asset Tutorial</h1>
+    <section class="BGimage"></section>
+    <section><div class="content-box"><p class="text01">Hello, everyone.<br>Thank you for buying this asset.<br><br>First of all, I want to apologize. I'm not good at English.<br></p></div>
+    </section>
+ 
+    <section>
+        <div class="content-box">
+            <h2 class="QuickStart">Quick Start Guide</h2>
+            <ol>
+                <li>
+                    <p id="Mobile" class="text02">If you install and use this asset as is,<br><br>In this section, let’s go through a quick start to easily get started with this asset together!<br><br>After installing the asset, if you want to use it as is, there are a few things I’d like you to confirm.This is a necessary setup for most assets.Please check the game mode.You can check this either from the Project Settings under Maps & Modes or from the World Settings under GameMode.<br><br>This image shows the GameMode from the World Settings.<br>Change the settings for BP_ThirdPersonGameMode and make sure the red-highlighted area is correctly set.<br></p></li>
+                
+                <p class="image"><a href="./images/T_Explanation.png"><image src="./images/T_Explanation.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                
+                <p class="text01">Please check that these three settings are correctly configured.<br><br>&#9312 GameMode Override<br><span class="inline01">BP_ThirdPersonGameMode</span><br>&#9313HUD Class<br><span class="inline01">HUD_Conversation</span><br>&#9314Player Controller Class<br><span class="inline01">PC_Conversation</span>
+                </p>
+                
+                <li>
+                    <p class="text02">If you are migrating and using it</p>
+                    <p class="text02">If you want to migrate after installing this asset, please refer to <a href="https://dev.epicgames.com/documentation/en-us/unreal-engine/migrating-assets-in-unreal-engine?application_version=5.4" target="_blank">here</a> for the Epic official guide.<br><br>This asset is designed to be as easy to migrate as possible, but if not all of the asset is migrated, due to its nature, animation blueprints and structures may be difficult to migrate.<br><br>Exporting the CSV separately often allows for migration without errors.<br>In particular, the 'F_Conversation' structure variable in the animation blueprint is prone to errors during migration, so you may need to recreate it or take other measures.</p>
+                    <p class="image"><a href="./images/T_Explanation00.png"><image src="./images/T_Explanation00.png" class="Explanation" alt="Explanation"></a>
+                    </p>
+                </li>
+                </ol>
+                
+                <center style="background: #184ea4;color: #fff;font-size: 24px;">-About the two UI modes-</center>
+                <ul>
+                <li>
+                    <p id="Mobile" class="text02">Novel Mode</p>
+                </li>
+                
+                <p class="image"><a href="./images/T_Explanation14.png"><image src="./images/T_Explanation14.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                
+                <p class="text01">This is a mode used for a UI similar to those found in typical Japanese visual novels.<br>This allows you to reuse and display the animations of characters shown in the Outliner as they are.<br><br>This mode ignores all camera settings registered in the CSV.<br>Please note.</p>
+                
+                <li>
+                    <p class="text02">Story Mode</p>
+                    <p class="image"><a href="./images/T_Explanation15.png"><image src="./images/T_Explanation15.png" class="Explanation" alt="Explanation"></a></p>
+                    <p class="text02">This mode is designed to advance conversations with characters placed in the Outliner in a way that looks more seamless.<br><br>You can focus the camera on characters in important scenes or continue the game with the third-person camera.</p>
+                </li>
+                </ul>
+                <p class="text02">Switching between the modes is done by casting to HUD_Conversation from BeginPlay in each level blueprint and accessing the Mode variable.<br>You need to try the map and decide which mode to use.<br><br>Try using the Demo and choose the one you prefer.</p>
+  
+                <p class="text02"><h2><center style="background: #184ea4;color: #fff;font-size: 40px;">-Tutorial-</center></h2>
+                </p>
+                <p class="text02"><h3>Preparing the CSV before using this asset</h3>
+                </p>
+                
+                <p class="text02">I designed this asset with the intention of making it easy for you to use.<br>How about using it for this purpose?<br>As long as you create the CSV for the story you want to use, you can place 'BP_TalkCharacter' in the Outliner and set up the game mode in different maps to use it just like the demo map.<br>Just in case, I have provided a blank CSV template that I created. If you want to use it, please <a href="https://docs.google.com/spreadsheets/d/1ef-r55MmfWKk8lWRsCf8EoQ89Ac5twjTmTwgIIATbbk/edit?usp=sharing" Target_"blank">Download</a> it here.
+                <p class="text02">
+                <ul>
+                    <li class="dot">About CharacterName and TextBody
+                        <p class="text02">First, I will explain using the plain CSV file downloaded from the section above.<br><a href="./images/T_Explanation01.png"><image src="./images/T_Explanation01.png" class="Explanation" alt="Explanation"></a><br>This time, I will input data randomly, as shown in the CSV file in the image.<br>First, you can write the names and text body however you like.<br>There may not be much need for explanation.<br>Regarding names:<br>If left blank, the entire text box will be removed.<br>In that case, no log will be saved.<br>There is nothing specific to mention about the text body.<br>When writing in Unreal Engine or a spreadsheet, you can usually insert a line break by pressing Alt+Enter or Ctrl+Enter if needed.<br>So, keep this in mind.<br>
+                        </p>
+                    </li>
+                    <li class="dot">Animation
+                        <p class="text02">Please enter the reference path for the animation montage in the Animation field.<br>Please refer to the image below.<br>
+                        <br><br>
+                        <a href="./images/T_Explanation02.png"><image src="./images/T_Explanation02.png" class="Explanation" alt="Explanation"></a>
+                        At this time, make sure to select an animation montage, not an animation sequence, and choose Copy Reference instead of Copy File Path.<br>This time, I have inserted the sample animations included in the asset in order.<br><br>
+                        <a href="./images/T_Explanation03.png"><image src="./images/T_Explanation03.png" class="Explanation" alt="Explanation"></a>
+                        </p>
+                    </li>
+                    <li class="dot">SpawnCamera
+                        <p class="text02">SpawnCamera is a Boolean type, so you need to enter either TRUE or FALSE.<br>To avoid mistakes or bugs, even if you're not using it, make sure to enter FALSE instead of leaving it blank.<br>If TRUE, be sure to fill in the next field, TargetLocation.<br>If you set it to TRUE and do not fill in TargetLocation, the camera will default to the world origin with LocationRotation0 and Scale1. <br>Be aware of this.<br><br>
+                        <a href="./images/T_Explanation04.png"><image src="./images/T_Explanation04.png" class="Explanation" alt="Explanation"></a>
+                        Also, if the TextBody is the last conversation with the target character, be sure to set it to FALSE.<br>Otherwise, the camera will remain fixed at the last position where TRUE was set, and it won't return.<br>Be careful with this.<br><br>
+                        </p>
+                    </li>
+                    <li id="TargetLocation" class="dot">TargetLocation
+                        <p class="text02">As mentioned with SpawnCamera, if you set SpawnCamera to TRUE, be sure to fill it in.<br>For safety, when it's set to FALSE, fill in the origin.<br><br>The origin is <br>Rotation=(X=0.000000,Y=0.000000,Z=0.000000,W=1.000000),<br>Translation=(X=0.000000,Y=0.000000,Z=0.000000),<br>Scale3D=(X=1.000000,Y=1.000000,Z=1.000000)<br><br>Always set Scale3D to 1. <br>Setting it to anything else doesn't make sense and can cause confusion.<br><br>Setting the position is a bit analog, but select CameraActor from the Place Actors on the left of the viewport and drop it into the World Outliner or the viewport.<br>Adjust the camera's position and angle while checking the wipe at the bottom right of the viewport.<br><br>
+                        <a href="./images/T_Explanation05.png"><image src="./images/T_Explanation05.png" class="Explanation" alt="Explanation"></a>
+                        Finally, verify the completed transform position, and you're done.<br>This step is just for checking the transform position, so you can delete the added camera as it's no longer needed.<br>A small tip: it's easier to enter this transform data after importing the CSV into Unreal Engine.<br>Set everything to the origin first, then adjust later to make the project easier to manage.<br>Give it a try.<br>
+                        </p>
+                    </li>
+                    <li class="dot">TargetTime
+                        <p class="text02">Enter the time it takes for the camera to switch from the third-person camera to the TargetLocation.<br>This value should be entered as a float variable.<br>Enter it as a number.<br>If not in use, it's best to enter 0.<br><br><br>
+                        With this, your CSV preparation is complete.<br><br>
+                        <a href="./images/T_Explanation06.png"><image src="./images/T_Explanation06.png" class="Explanation" alt="Explanation"></a>
+                        </p>
+                    </li>
+                </ul>
+                </p>
+                </p>
+                
+                <p class="text02"><h3>Preparation complete! Let's link the CSV!</h3>
+                </p>
+                <p class="text02"><br><br>To make future work easier, I want to link the CSV file you prepared with DT_Conversation under ---CSVConversationNovel>Data in Unreal Engine.<br>The easiest way is to overwrite the existing 'DT_Conversation'.<br>This allows you to use it without modifying the references in the animation blueprint variables.<br>If you prefer another method, like keeping the original file or making a backup, be careful not to cause reference errors in the F_Conversation variable of the animation blueprint.<br>If you must keep the original, you might add the new CSV data to another row, like starting from row 100 or later.<br>The key here is to ensure that your prepared CSV file is properly linked with DT_Conversation under ---CSVConversationNovel>Data in the asset's content folder, without causing any errors in the F_Conversation variable of the animation blueprint.<br><br>
+                In the Content Drawer, display the folder containing ---CSVConversationNovel>Data>DT_Conversation, then drag and drop your prepared CSV to overwrite it.<br>Therefore, the prepared file must have the same file name.<br><br>
+                <a href="./images/T_Explanation07.png"><image src="./images/T_Explanation07.png" class="Explanation" alt="Explanation"></a>
+                </p>
+                
+                <p class="text02"><h3>Let's try using it in different levels!</h3>
+                </p>
+                <p class="text02"><br><br>Let's create a new level to make it easier to understand.<br>We'll create a standard level as usual.<br>Set up the Gamemode just like we did in the Quick Start.<br>Place a PlayerStart from the PlaceActors panel.<br>
+                <br>Set up the level as shown in the red area of the image.<br><br>
+                <a href="./images/T_Explanation08.png"><image src="./images/T_Explanation08.png" class="Explanation" alt="Explanation"></a>
+                Let's play in PIE (Play In Editor).<br>
+                If the top UI is displayed and there are no errors, as shown in the image below, then the level setup is complete.<br>
+                Please also check to ensure that the character moves as expected.<br><br>
+                <a href="./images/T_Explanation09.png"><image src="./images/T_Explanation09.png" class="Explanation" alt="Explanation"></a>
+                Place the necessary number of BP_TalkCharacter actors in the world.<br>Since there are four characters listed in the CSV CharacterName, please place four characters.<br>
+                From the Details panel, change the BP_TalkCharacter actors to the corresponding colors as specified in the CSV.<br>
+                In the CSV, the characters are Manny, MannyRed, MannyBlue, and MannyGreen.<br>
+                So, change the colors to normal, red, blue, and green.<br><br>
+                <a href="./images/T_Explanation10.png"><image src="./images/T_Explanation10.png" class="Explanation" alt="Explanation"></a>
+                Next, let's set the Rows in the Details panel corresponding to each CSV.<br>
+                In the Details panel, under the CSVCast category, click the plus button in the RowSelector to add the number of conversations and set the corresponding Index.<br>
+                This time, we're setting them in order as there was no particular reason to change it, but it's fine if they aren't in order.<br>
+                For example, as long as it's configured in the CSV, you can set something like 50➔105➔1 here, and the corresponding text and settings will be output.<br>
+                Set up multiple CSVs and experiment with different configurations.<br><br>
+                <a href="./images/T_Explanation11.png"><image src="./images/T_Explanation11.png" class="Explanation" alt="Explanation"></a>
+                Finally, as briefly mentioned in the CSV preparation section, we'll proceed with the skipped camera settings.<br>
+                Please refer to the image at the bottom of the CSV.<br><br>
+                <a href="./images/T_Explanation12.png"><image src="./images/T_Explanation12.png" class="Explanation" alt="Explanation"></a>
+                To put it simply<br><br>&#9312When talking to MannyRed, the index will be 4. The spawn camera will be active, and the camera will switch from the third-person camera to the spawn camera within 3 seconds.<br>&#9313On the second page of MannyRed's conversation, the index will be 5. The name will disappear, and the spawn camera will remain active. The spawn camera will keep its current values and will not move.<br>&#9314On the third page of MannyRed's conversation, the index will be 6. The name will remain disappeared, the spawn camera will be deactivated and return to the third-person camera, and the spawn camera will be reset to the origin.<br><br>
+                Please refer to <a href="#TargetLocation">here</a> for camera position settings.<br><br>Instead of returning to the CSV to input the decided positions, open Data > DT_Conversation (DataTable) in Unreal Engine and enter the values there.<br>In my case, for index 4, Location(X940 Y320 Z130) and Rotation(X0 Y0 Z-25) seem to be just right, so I will enter these values.<br>Similarly, enter the same values for index 5.<br>In this case, since the camera will not move, set TargetTime to 0.<br>It is important to keep SpawnCamera set to TRUE for Row 5.<br>Only set it to FALSE when returning to the Third-person Camera.<br><br>
+                    <a href="./images/T_Explanation13.png"><image src="./images/T_Explanation13.png" class="Explanation" alt="Explanation"></a>
+                    
+                </p>
+        </div>
+    </section>
+ 
+    <footer>Copyright (c) Gliese Regurus All Rights Reserved.</footer>
+
+</body>
+</html>
