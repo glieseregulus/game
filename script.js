@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
                 </div>`;
         } else if(workId === 'fab') {
             contentHtml = `
-                <p style="color:var(--text-sub); margin-bottom:20px;">Fab Marketplaceで公開・販売中のアセット紹介デモ映像です。</p>
+                <p style="color:var(--text-sub); margin-bottom:20px;">Fab Marketplaceで公開・販売中のアセット紹介デモ映像です。<span><a href="https://www.fab.com/sellers/GliesesStore" target="_blank">Fab MarketPlaceはこちら</a></span></p>
                 <div style="background:#000; width:100%; aspect-ratio:16/9; border:2px solid var(--neon-cyan); position:relative;">
                     <iframe width="100%" height="100%" src="https://www.youtube.com/embed/SW4fKWk6s7E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute; top:0; left:0; width:100%; height:100%;"></iframe>
                 </div>`;
